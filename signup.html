@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vintage Car Signup</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Georgia, serif;
+    overflow:hidden;
+    transition:0.4s;
+    background:#f8f6f1;
+}
+
+.dark{
+    background:#111827;
+}
+
+
+.bg-animation{
+    position:absolute;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    z-index:-1;
+}
+
+.bg-animation span{
+    position:absolute;
+    display:block;
+    border-radius:50%;
+    animation: float 18s linear infinite;
+    opacity:0.15;
+}
+
+.bg-animation span:nth-child(1){
+    width:120px;
+    height:120px;
+    background:#d97706;
+    left:10%;
+}
+
+.bg-animation span:nth-child(2){
+    width:180px;
+    height:180px;
+    background:#1e3a8a;
+    left:70%;
+}
+
+.bg-animation span:nth-child(3){
+    width:90px;
+    height:90px;
+    background:#991b1b;
+    left:40%;
+}
+
+@keyframes float{
+    0%{transform:translateY(100vh) scale(0);}
+    100%{transform:translateY(-10vh) scale(1);}
+}
+
+.glass{
+    backdrop-filter:blur(14px);
+    background:rgba(255,255,255,0.75);
+    border:1px solid rgba(255,255,255,0.3);
+}
+
+.dark .glass{
+    background:rgba(17,24,39,0.8);
+    color:white;
+}
+
+.dark input{
+    background:rgba(255,255,255,0.08);
+    color:white;
+}
+
+.dark input::placeholder{
+    color:#ccc;
+}
+
+.dark .social-light{
+    background:#1f2937;
+    color:white;
+}
+
+
+@media(max-width:768px){
+    .grid-name{
+        grid-template-columns:1fr !important;
+    }
+
+    .social-grid{
+        grid-template-columns:1fr !important;
+    }
+
+    .signup-card{
+        width:90%;
+        padding:20px;
+    }
+}
+
+@media(max-width:300px){
+    .signup-card{
+        width:96%;
+        padding:14px;
+    }
+
+    .social-btn{
+        font-size:12px;
+    }
+}
+</style>
+</head>
+
+<body class="h-screen flex items-center justify-center px-4">
+
+
+<div class="bg-animation">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+
+<div class="absolute top-4 right-4 flex gap-2">
+
+    <button id="rtlToggle"
+        class="px-3 py-2 rounded-full bg-amber-500 text-black text-sm">
+        RTL
+    </button>
+
+    <button id="themeToggle"
+        class="p-3 rounded-full bg-black text-white">
+        <i class="fas fa-moon"></i>
+    </button>
+
+</div>
+
+
+<div class="glass signup-card w-full max-w-md rounded-2xl shadow-2xl p-6 transition-all">
+
+    
+    <div class="text-center mb-4">
+        <a href="../index.html"
+            class="text-2xl font-bold text-amber-600 hover:text-amber-500">
+            vintageRestore
+        </a>
+        <p class="text-sm text-gray-500 mt-1">Create your restoration account</p>
+    </div>
+
+    
+    <form class="space-y-3">
+
+        
+        <div class="grid grid-cols-2 gap-3 grid-name">
+            <input type="text"
+                placeholder="Full Name"
+                class="w-full px-4 py-2 rounded-lg border focus:ring-2 focus:ring-amber-500 outline-none">
+
+            <input type="text"
+                placeholder="Last Name"
+                class="w-full px-4 py-2 rounded-lg border focus:ring-2 focus:ring-amber-500 outline-none">
+        </div>
+
+        
+        <input type="email"
+            placeholder="Email Address"
+            class="w-full px-4 py-2 rounded-lg border focus:ring-2 focus:ring-amber-500 outline-none">
+
+        <input type="tel"
+            placeholder="Phone Number"
+            class="w-full px-4 py-2 rounded-lg border focus:ring-2 focus:ring-amber-500 outline-none">
+
+        <div class="relative">
+            <input id="password"
+                type="password"
+                placeholder="Password"
+                class="w-full px-4 py-2 rounded-lg border focus:ring-2 focus:ring-amber-500 outline-none">
+
+            <i id="togglePassword"
+                class="fas fa-eye absolute right-4 top-3 cursor-pointer text-gray-500"></i>
+        </div>
+
+        <div class="relative">
+            <input id="confirmPassword"
+                type="password"
+                placeholder="Confirm Password"
+                class="w-full px-4 py-2 rounded-lg border focus:ring-2 focus:ring-amber-500 outline-none">
+
+            <i id="toggleConfirmPassword"
+                class="fas fa-eye absolute right-4 top-3 cursor-pointer text-gray-500"></i>
+        </div>
+
+        
+        <button
+            class="w-full bg-amber-600 hover:bg-amber-700 text-white py-2 rounded-lg font-semibold">
+            Sign Up
+        </button>
+
+    </form>
+
+    
+    <div class="flex items-center my-3">
+        <div class="flex-1 border-t"></div>
+        <span class="px-3 text-sm text-gray-500">or</span>
+        <div class="flex-1 border-t"></div>
+    </div>
+
+    
+    <div class="grid grid-cols-3 gap-2 social-grid">
+
+        <button class="social-btn social-light py-2 rounded-lg border flex justify-center items-center gap-2">
+            <i class="fab fa-google text-red-500"></i>
+        </button>
+
+        <button class="social-btn py-2 rounded-lg bg-black text-white flex justify-center items-center gap-2">
+            <i class="fab fa-apple"></i>
+        </button>
+
+        <button class="social-btn py-2 rounded-lg bg-blue-600 text-white flex justify-center items-center gap-2">
+            <i class="fab fa-facebook-f"></i>
+        </button>
+
+    </div>
+
+    
+    <p class="text-center text-sm mt-3">
+        Already have an account?
+        <a href="../login.html" class="text-amber-600">Login</a>
+    </p>
+
+</div>
+
+<script>
+
+
+document.getElementById('togglePassword').onclick = function(){
+    const input = document.getElementById('password');
+    input.type = input.type === 'password' ? 'text' : 'password';
+};
+
+document.getElementById('toggleConfirmPassword').onclick = function(){
+    const input = document.getElementById('confirmPassword');
+    input.type = input.type === 'password' ? 'text' : 'password';
+};
+
+
+document.getElementById('themeToggle').onclick = function(){
+    document.body.classList.toggle('dark');
+};
+
+
+document.getElementById('rtlToggle').onclick = function(){
+    document.documentElement.dir =
+    document.documentElement.dir === 'ltr' ? 'rtl' : 'ltr';
+};
+
+</script>
+
+</body>
+</html>

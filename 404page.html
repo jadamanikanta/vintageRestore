@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>404 - VintageRestore</title>
+
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#6B1E1E',
+            secondary: '#C8A96A'
+          },
+          animation: {
+            float: "float 6s ease-in-out infinite",
+            bounceSlow: "bounce 2s infinite"
+          },
+          keyframes: {
+            float: {
+              '0%,100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-20px)' }
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    
+    .bg-animation::before {
+      content: "";
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(200,169,106,0.3), transparent);
+      top: 20%;
+      left: 10%;
+      animation: float 8s infinite ease-in-out;
+    }
+
+    .bg-animation::after {
+      content: "";
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(107,30,30,0.25), transparent);
+      bottom: 10%;
+      right: 10%;
+      animation: float 10s infinite ease-in-out;
+    }
+  </style>
+</head>
+
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition duration-300 relative overflow-hidden">
+
+  
+  <div class="absolute inset-0 bg-animation"></div>
+
+  
+  <header class="absolute top-0 left-0 w-full flex justify-between items-center p-6 z-10">
+
+    
+    <a href="../index.html" class="text-2xl font-bold text-primary">
+      Vintage<span class="text-secondary">Restore</span>
+    </a>
+
+    
+    <div class="flex items-center gap-4">
+      
+      
+      <button onclick="toggleRTL()" class="px-3 py-1 border rounded text-sm">
+        RTL
+      </button>
+
+      
+      <button onclick="toggleDark()" class="px-3 py-1 border rounded text-sm">
+        🌙
+      </button>
+    </div>
+
+  </header>
+
+  
+  <div class="flex flex-col items-center justify-center min-h-screen text-center px-6 relative z-10">
+
+    
+    <h1 class="text-7xl md:text-9xl font-extrabold text-primary animate-bounceSlow">
+      404
+    </h1>
+
+    
+    <p class="mt-6 text-lg md:text-xl text-gray-600 dark:text-gray-300">
+      Oops! This vintage road seems lost...
+    </p>
+
+    
+    <a href="../index.html" 
+       class="mt-8 px-6 py-3 bg-primary text-white rounded-full hover:bg-secondary transition">
+       Back to Garage
+    </a>
+
+  </div>
+
+  
+  <script>
+    function toggleDark() {
+      document.documentElement.classList.toggle('dark');
+    }
+
+    function toggleRTL() {
+      const html = document.documentElement;
+      html.dir = html.dir === "rtl" ? "ltr" : "rtl";
+    }
+  </script>
+
+</body>
+</html>

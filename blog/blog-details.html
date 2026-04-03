@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vintage Restore</title>
+
+    <link rel="stylesheet" href="../global-css/global.css">
+    
+    <link rel="stylesheet" href="../blog/blog-details.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+</head>
+<body>
+
+    <div id="navbar"></div>
+
+    <section class="blog-hero reveal">
+  <div class="blog-hero-content">
+
+    <span class="tag">Restoration Story</span>
+
+    <h1>1967 Mustang: From Rust to Royalty</h1>
+
+    <div class="meta">
+      <span><i data-lucide="calendar"></i> April 2026</span>
+      <span><i data-lucide="clock"></i> 8 min read</span>
+      <span><i data-lucide="user"></i> MK Workshop Team</span>
+    </div>
+
+  </div>
+</section>
+
+<section class="blog-content reveal">
+
+  <div class="container">
+
+    <p>
+      This 1967 Mustang was discovered in a forgotten barn after more than 20 years.
+      Covered in rust, dust, and completely non-functional, it was a true challenge.
+    </p>
+
+    <h2>Initial Condition</h2>
+    <p>
+      The chassis was heavily corroded, engine seized, and interior completely damaged.
+      Every component needed careful inspection before restoration began.
+    </p>
+
+    <img src="../global-images/engine.jpg" alt="Initial condition"/>
+
+    <h2>Disassembly Process</h2>
+    <p>
+      The vehicle was fully dismantled to assess hidden damage and structural issues.
+      Each part was cataloged for restoration or replacement.
+    </p>
+
+    <img src="../global-images/mustang-disassembly.jpeg" alt="Disassembly"/>
+
+    <h2>Engine Rebuild</h2>
+    <p>
+      The engine was completely stripped, cleaned, and rebuilt using precision tools
+      and OEM-spec components for long-term reliability.
+    </p>
+
+    <img src="../global-images/mustang-rebuild.jpeg" alt="Engine rebuild"/>
+
+    <h2>Final Restoration Result</h2>
+    <p>
+      After months of craftsmanship, the Mustang returned to life — restored to showroom condition
+      with its original character preserved.
+    </p>
+
+    <img src="../global-images/mustang-final.jpg" alt="Final result"/>
+
+  </div>
+
+</section>
+
+<section class="tech reveal">
+
+  <div class="container">
+
+    <h2>Technical Breakdown</h2>
+    <p class="subtext">Detailed restoration work performed on this vehicle</p>
+
+    <div class="tech-grid">
+
+      <div class="tech-card">
+        <i data-lucide="settings"></i>
+        <h3>Engine Restoration</h3>
+        <p>Fully rebuilt V8 engine with OEM-grade components and precision tuning.</p>
+      </div>
+
+      <div class="tech-card">
+        <i data-lucide="car"></i>
+        <h3>Body Restoration</h3>
+        <p>Complete rust removal, frame strengthening, and structural repair.</p>
+      </div>
+
+      <div class="tech-card">
+        <i data-lucide="paintbrush-2"></i>
+        <h3>Paint Job</h3>
+        <p>Factory-original color restoration with anti-corrosion coating.</p>
+      </div>
+
+      <div class="tech-card">
+        <i data-lucide="cog"></i>
+        <h3>Parts Replacement</h3>
+        <p>OEM + custom fabricated parts used for missing or damaged components.</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="author reveal">
+
+  <div class="container">
+
+    <div class="author-box">
+
+      <div class="author-img">
+        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e" alt="Workshop Team">
+      </div>
+
+      <div class="author-content">
+
+        <h2> Vintage Restoration Workshop</h2>
+
+        <p>
+          We are a dedicated team of vintage car restoration experts with over a decade of experience
+          in rebuilding classic automobiles with precision, authenticity, and craftsmanship.
+        </p>
+
+        <p>
+          Our mission is to preserve automotive heritage while delivering showroom-quality restorations
+          that bring classic cars back to life.
+        </p>
+
+        <div class="stats">
+
+          <div>
+            <h3>10+ Years</h3>
+            <span>Experience</span>
+          </div>
+
+          <div>
+            <h3>250+</h3>
+            <span>Cars Restored</span>
+          </div>
+
+          <div>
+            <h3>100%</h3>
+            <span>Client Satisfaction</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+    <div id="footer"></div>
+
+    
+
+    <script>
+        
+fetch("../components/navbar.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("navbar").innerHTML = data;
+
+    
+  const loginBtn = document.getElementById("loginBtn");
+  loginBtn.addEventListener("click", () => {
+    window.location.href = "../login.html"; 
+  });
+  const mobileLoginBtn = document.getElementById("mobileLoginBtn");
+  mobileLoginBtn.addEventListener("click", () => {
+    window.location.href = "../login.html"; 
+  });
+
+
+    initializeNavbar();
+  });
+
+  fetch("../components/footer.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("footer").innerHTML = data;
+    
+    const mobileLoginBtn = document.getElementById("homepage-redirect");
+  mobileLoginBtn.addEventListener("click", () => {
+    window.location.href = "../index.html"; 
+  });
+    
+  });
+const revealElements = document.querySelectorAll(".reveal");
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("active");
+    }
+  });
+}, { threshold: 0.2 });
+
+revealElements.forEach(el => observer.observe(el));
+
+lucide.createIcons();
+
+
+document.querySelectorAll(".author-box").forEach(box => {
+  box.addEventListener("mouseenter", () => {
+    box.style.transition = "0.3s ease";
+  });
+});
+
+// NAVBAR LOGIC
+function initializeNavbar() {
+
+  // DARK MODE
+const themeToggle = document.getElementById("themeToggle");
+
+themeToggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+
+  themeToggle.querySelector(".icon").textContent =
+    document.body.classList.contains("dark") ? "☀️" : "🌙";
+});
+
+// RTL
+const rtlToggle = document.getElementById("rtlToggle");
+
+rtlToggle.addEventListener("click", () => {
+  const isRTL = document.documentElement.dir === "rtl";
+  document.documentElement.dir = isRTL ? "ltr" : "rtl";
+});
+
+// MOBILE MENU
+const menuToggle = document.getElementById("menuToggle");
+const navMenu = document.getElementById("navMenu");
+
+menuToggle.addEventListener("click", () => {
+  navMenu.classList.toggle("active");
+});
+
+// MOBILE DROPDOWN SUPPORT
+const dropdown = document.querySelector(".dropdown");
+const dropdownMenu = document.querySelector(".dropdown-menu");
+
+dropdown.addEventListener("click", (e) => {
+  if (window.innerWidth <= 768) {
+    e.preventDefault();
+    dropdownMenu.classList.toggle("show");
+  }
+});
+}
+    </script>
+</body>
+</html>
