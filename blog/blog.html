@@ -32,7 +32,7 @@
 
       <div class="blog-hero__actions">
         <button class="btn-primary">Explore Articles</button>
-        <button class="btn-secondary">Watch Stories</button>
+        
       </div>
     </div>
 
@@ -304,7 +304,15 @@ fetch("../components/navbar.html")
     window.location.href = "../login.html"; 
   });
 
+const links = document.querySelectorAll('.nav-link');
+    const currentPage = window.location.pathname.split('/').pop();
 
+    links.forEach(link => {
+      const linkPage = link.getAttribute('href').split('/').pop();
+      if (linkPage === currentPage) {
+        link.classList.add('active');
+      }
+    });
     initializeNavbar();
   });
 

@@ -33,7 +33,7 @@
 
     <div class="hero-actions">
       <button class="primary-btn">Explore Our Work</button>
-      <button class="secondary-btn">Contact Us</button>
+      
     </div>
 
     <div class="hero-stats">
@@ -97,7 +97,7 @@
   <div class="section-header">
     <span class="tag">What We Believe</span>
     <h2>Our Restoration Philosophy</h2>
-    <p>We don’t just repair cars — we preserve history with precision and respect.</p>
+    <p>We don’t just repair cars-we preserve history with precision and respect.</p>
   </div>
 
   <div class="philosophy-grid">
@@ -122,7 +122,7 @@
     <div class="icon"><i data-lucide="paintbrush"></i></div>
     <h3>Artistic Restoration</h3>
     <p>
-      Restoration is not just mechanical — it’s an art form that revives timeless beauty.
+      Restoration is not just mechanical-it’s an art form that revives timeless beauty.
     </p>
   </div>
 
@@ -143,10 +143,10 @@
     </p>
 
     <div class="workshop-features">
-      <div>✔ Engine Rebuilding</div>
-      <div>✔ Body Restoration</div>
-      <div>✔ Custom Paintwork</div>
-      <div>✔ Authentic Parts Sourcing</div>
+      <div><i data-lucide="settings"></i> Engine Rebuilding</div>
+<div><i data-lucide="wrench"></i> Body Restoration</div>
+<div><i data-lucide="palette"></i> Custom Paintwork</div>
+<div><i data-lucide="package-search"></i> Authentic Parts Sourcing</div>
     </div>
 
   </div>
@@ -294,6 +294,15 @@ fetch("../components/navbar.html")
     window.location.href = "../login.html"; 
   });
 
+  const links = document.querySelectorAll('.nav-link');
+    const currentPage = window.location.pathname.split('/').pop();
+
+    links.forEach(link => {
+      const linkPage = link.getAttribute('href').split('/').pop();
+      if (linkPage === currentPage) {
+        link.classList.add('active');
+      }
+    });
 
     initializeNavbar();
   });

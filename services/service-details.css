@@ -75,8 +75,9 @@
 }
 
 .sd-btn.primary {
-  background: #b08d57;
-  color: #111;
+  background: var(--primary);
+  color: #fff;
+  border: 2px solid var(--primary);
 }
 
 .sd-btn.primary:hover {
@@ -84,14 +85,12 @@
 }
 
 .sd-btn.secondary {
-  border: 1px solid #b08d57;
+  background: var(--primary);
   color: #fff;
+  border: 2px solid var(--primary);
 }
 
-.sd-btn.secondary:hover {
-  background: #b08d57;
-  color: #111;
-}
+
 
 
 body[dir="rtl"] .sd-hero-content {
@@ -408,8 +407,9 @@ body[dir="rtl"] .sd-process-card {
 
 .sd-btn-primary {
   padding: 12px 22px;
-  background: #111;
+  background: var(--primary);
   color: #fff;
+  border: 2px solid var(--primary);
   text-decoration: none;
   border-radius: 10px;
   font-weight: 600;
@@ -417,26 +417,12 @@ body[dir="rtl"] .sd-process-card {
 }
 
 .sd-btn-primary:hover {
-  background: #000;
+  
   transform: translateY(-3px);
 }
 
 
-.sd-btn-secondary {
-  padding: 12px 22px;
-  background: transparent;
-  color: #111;
-  border: 2px solid #111;
-  text-decoration: none;
-  border-radius: 10px;
-  font-weight: 600;
-  transition: 0.3s;
-}
 
-.sd-btn-secondary:hover {
-  background: #111;
-  color: #fff;
-}
 
 
 body.dark .sd-cta-content h2,
@@ -805,9 +791,7 @@ body[dir="rtl"] .ba-after-label {
 }
 
 
-/* =========================
-   FAQ SECTION BASE
-========================= */
+
 
 .faq-section {
   padding: 80px 20px;
@@ -901,9 +885,7 @@ body[dir="rtl"] .ba-after-label {
   border-color: var(--accent);
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
+
 
 @media (max-width: 768px) {
   .faq-title {

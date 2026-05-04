@@ -280,7 +280,7 @@
 
     <div class="cta__actions">
       <a href="/contact" class="cta__btn primary">Get Free Quote</a>
-      <a href="/services" class="cta__btn secondary">View Services</a>
+      
     </div>
 
   </div>
@@ -306,7 +306,15 @@ fetch("../components/navbar.html")
   mobileLoginBtn.addEventListener("click", () => {
     window.location.href = "../login.html"; 
   });
+const links = document.querySelectorAll('.nav-link');
+    const currentPage = window.location.pathname.split('/').pop();
 
+    links.forEach(link => {
+      const linkPage = link.getAttribute('href').split('/').pop();
+      if (linkPage === currentPage) {
+        link.classList.add('active');
+      }
+    });
 
     initializeNavbar();
   });

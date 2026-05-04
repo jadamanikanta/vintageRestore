@@ -27,9 +27,7 @@ body {
     color: #fff;
 }
 
-/* =========================
-   SLIDES
-========================= */
+
 .hero-slide {
     position: absolute;
     inset: 0;
@@ -45,9 +43,7 @@ body {
     transform: scale(1);
 }
 
-/* =========================
-   OVERLAY (LIGHT / DARK SUPPORT)
-========================= */
+
 .hero-overlay {
     position: absolute;
     inset: 0;
@@ -105,24 +101,22 @@ body.light .hero-overlay {
     animation: fadeUp 1.3s ease forwards;
 }
 
-/* =========================
-   BUTTON
-========================= */
+
 .hero-btn {
     display: inline-block;
     padding: 14px 30px;
-    border: 2px solid #fff;
-    color: #fff;
+    background: var(--primary);
+  color: #fff;
+  border: 2px solid var(--primary);
     text-decoration: none;
     font-weight: 600;
+    border-radius: 10px;
     backdrop-filter: blur(8px);
     transition: 0.4s ease;
     animation: fadeUp 1.6s ease forwards;
 }
 
 .hero-btn:hover {
-    background: #c8a96a;
-    border-color: #c8a96a;
     transform: translateY(-4px);
     box-shadow: 0 10px 30px rgba(0,0,0,0.4);
 }
@@ -139,6 +133,7 @@ body.light .hero-overlay {
     height: 40px;
     border: 2px solid #fff;
     border-radius: 20px;
+    display: none;
 }
 
 .scroll-indicator::before {
@@ -762,8 +757,9 @@ body.dark .why__card {
 
 
 .cta__btn.primary {
-  background: #fff;
-  color: #000;
+  background: var(--primary);
+  color: #fff;
+  border: 2px solid var(--primary);
 }
 
 .cta__btn.primary:hover {
@@ -772,17 +768,7 @@ body.dark .why__card {
 }
 
 
-.cta__btn.secondary {
-  border: 2px solid #fff;
-  color: #fff;
-  background: transparent;
-}
 
-.cta__btn.secondary:hover {
-  background: #fff;
-  color: #000;
-  transform: translateY(-5px);
-}
 
 
 [dir="rtl"] .cta {

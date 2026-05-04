@@ -54,9 +54,7 @@
       <a href="" class="hero__btn hero__btn--primary">
         Explore Services
       </a>
-      <a href="" class="hero__btn hero__btn--secondary">
-        Get a Quote
-      </a>
+      
     </div>
   </div>
 
@@ -303,7 +301,7 @@
 
     <div class="cta__buttons">
       <a href="#contact" class="btn btn-primary">Get a Quote</a>
-      <a href="tel:+919999999999" class="btn btn-outline">Call Now</a>
+      
     </div>
 
   </div>
@@ -336,7 +334,20 @@ fetch("components/navbar.html")
   });
 
 
+  const links = document.querySelectorAll('.nav-link');
+    const currentPage = window.location.pathname.split('/').pop();
+
+    links.forEach(link => {
+      const linkPage = link.getAttribute('href').split('/').pop();
+      if (linkPage === currentPage) {
+        link.classList.add('active');
+      }
+    });
+  
     initializeNavbar();
+     
+    
+
   });
 
   fetch("components/footer.html")
@@ -484,6 +495,8 @@ function initializeNavbar() {
     <script>
       lucide.createIcons();
     </script>
+
+    
     
 </body>
 </html>

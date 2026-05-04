@@ -43,7 +43,7 @@
 
 .primary-btn {
   padding: 12px 20px;
-  background: #c8a064;
+  background: var(--primary);
   border: none;
   color: white;
   cursor: pointer;
@@ -52,8 +52,9 @@
 
 .secondary-btn {
   padding: 12px 20px;
+  border: 1px solid var(--secondary);
+  color: var(--secondary);
   background: transparent;
-  border: 1px solid #999;
   cursor: pointer;
   border-radius: 6px;
 }
@@ -275,15 +276,19 @@ body[dir="rtl"] .story-content {
 
 
 .philosophy-card {
-  padding: 30px;
-  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;          /* center all content */
+  text-align: center;
+  gap: 12px;                    /* consistent spacing */
 
-  
+  padding: 30px;
+  border-radius: 16px;  
   background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(10px);
-
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, 
+              rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, 
+              rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   transition: 0.4s ease;
   cursor: pointer;
 
@@ -291,13 +296,39 @@ body[dir="rtl"] .story-content {
   opacity: 0;
 }
 
-
+/* ICON FIX */
 .philosophy-card .icon {
-  font-size: 2rem;
-  margin-bottom: 15px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(200,169,106,0.15);
+  border-radius: 50%;
 }
 
+.philosophy-card .icon i {
+  width: 28px;
+  height: 28px;
+  color: #c8a96a;
+}
 
+/* HEADING */
+.philosophy-card h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* TEXT */
+.philosophy-card p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 260px;   /* keeps all cards equal */
+}
+
+/* HOVER */
 .philosophy-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 20px 50px rgba(0,0,0,0.15);
@@ -381,9 +412,22 @@ body[dir="rtl"] .philosophy-grid {
 }
 
 .workshop-features div {
+  display: flex;              /* Align icon + text in a row */
+  align-items: center;        /* Vertical alignment */
+  gap: 10px;                  /* Space between icon & text */
   padding: 10px;
   background: rgba(0,0,0,0.05);
   border-radius: 8px;
+  font-size: 14px;
+}
+
+/* Icon styling */
+.workshop-features i {
+  width: 18px;
+  height: 18px;
+  stroke-width: 2;
+  color: #c8a96a; /* your secondary color */
+  flex-shrink: 0; /* prevent icon shrinking */
 }
 
 
@@ -737,18 +781,18 @@ body[dir="rtl"] .stats-grid {
 
 .cta-primary {
   padding: 14px 24px;
-  background: #c8a064;
-  border: none;
-  color: white;
+  background: var(--primary);
+  color: #fff;
+  border: 2px solid var(--primary);
   border-radius: 8px;
   cursor: pointer;
 }
 
 .cta-secondary {
   padding: 14px 24px;
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(200,160,100,0.5);
-  color: inherit;
+  background: var(--primary);
+  color: #fff;
+  border: 2px solid var(--primary);
   border-radius: 8px;
   cursor: pointer;
   backdrop-filter: blur(8px);
@@ -756,8 +800,8 @@ body[dir="rtl"] .stats-grid {
 }
 
 body.dark .cta-secondary {
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(200,160,100,0.7);
+  background: var(--primary);
+  border: 2px solid var(--primary);
 }
 
 

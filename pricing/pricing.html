@@ -30,7 +30,7 @@
 
         <div class="hero-buttons">
             <a href="#" class="hero-btn primary-btn">View Plans</a>
-            <a href="#" class="hero-btn secondary-btn">Request Quote</a>
+            
         </div>
 
         <div class="stats-row">
@@ -225,7 +225,7 @@
 
         <div class="pricing-cta-buttons">
             <a href="#" class="cta-btn primary-cta">Book Consultation</a>
-            <a href="#" class="cta-btn secondary-cta">View Portfolio</a>
+            
         </div>
     </div>
 
@@ -252,7 +252,15 @@ fetch("../components/navbar.html")
     window.location.href = "../login.html"; 
   });
 
+const links = document.querySelectorAll('.nav-link');
+    const currentPage = window.location.pathname.split('/').pop();
 
+    links.forEach(link => {
+      const linkPage = link.getAttribute('href').split('/').pop();
+      if (linkPage === currentPage) {
+        link.classList.add('active');
+      }
+    });
     initializeNavbar();
   });
 

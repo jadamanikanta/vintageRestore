@@ -121,6 +121,44 @@ body{
         font-size:12px;
     }
 }
+@media(max-width:360px){
+
+    body{
+        padding:12px;
+        overflow:auto;
+        align-items:flex-start;
+    }
+
+    .signup-card{
+        margin-top: 50px;
+        width:100%;
+        height:90%;
+        padding:10px 16px;
+        border-radius:20px;
+    }
+
+    .signup-card a{
+        font-size:20px;
+    }
+
+    .signup-card p{
+        font-size:10px;
+    }
+
+    input{
+        padding:5px !important;
+        font-size:12px;
+    }
+
+    button{
+        font-size:15px;
+
+    }
+
+    .social-btn{
+        width:100%;
+    }
+}
 </style>
 </head>
 
@@ -153,10 +191,9 @@ body{
 
     
     <div class="text-center mb-4">
-        <a href="../index.html"
-            class="text-2xl font-bold text-amber-600 hover:text-amber-500">
-            vintageRestore
-        </a>
+        <a href="../index.html" class="text-2xl font-bold tracking-wide">
+    <span style="color:#6B1E1E">Vintage</span><span style="color:#C8A96A">Restore</span>
+</a>
         <p class="text-sm text-gray-500 mt-1">Create your restoration account</p>
     </div>
 
@@ -222,15 +259,15 @@ body{
     <div class="grid grid-cols-3 gap-2 social-grid">
 
         <button class="social-btn social-light py-2 rounded-lg border flex justify-center items-center gap-2">
-            <i class="fab fa-google text-red-500"></i>
+            <i class="fab fa-google text-red-500"></i>Google
         </button>
 
         <button class="social-btn py-2 rounded-lg bg-black text-white flex justify-center items-center gap-2">
-            <i class="fab fa-apple"></i>
+            <i class="fab fa-apple"></i>Apple
         </button>
 
         <button class="social-btn py-2 rounded-lg bg-blue-600 text-white flex justify-center items-center gap-2">
-            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-facebook-f"></i>Facebook
         </button>
 
     </div>

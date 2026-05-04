@@ -25,8 +25,8 @@
         </p>
 
         <div class="hero-actions">
-          <button class="btn primary">Book Inspection</button>
-          <button class="btn outline">Explore Services</button>
+          <button class="btn service-primary">Book Inspection</button>
+          <button class="btn service-outline">Explore Services</button>
         </div>
 
         <div class="hero-badges">
@@ -57,49 +57,61 @@
 
         <div class="services-grid">
 
-          <div class="service-card reveal">
-            <div class="service-icon"><i data-lucide="car"></i></div>
-            <h3>Full Restoration</h3>
-            <p>Complete rebuild from chassis to finishing with original detailing.</p>
-            <a href="../services/servicedetails.html" class="service-btn">View Details →</a>
-          </div>
+  <div class="service-card reveal">
+    <div class="service-icon">
+      <img src="../global-images/fabrication.jpg" alt="Full Restoration">
+    </div>
+    <h3>Full Restoration</h3>
+    <p>Complete rebuild from chassis to finishing with original detailing.</p>
+    <a href="../services/servicedetails.html" class="service-btn">View Details →</a>
+  </div>
 
-          <div class="service-card reveal">
-            <div class="service-icon"><i data-lucide="wrench"></i></div>
-            <h3>Engine Rebuild</h3>
-            <p>Precision engine restoration for performance and reliability.</p>
-            <a href="../services/servicedetails.html" class="service-btn">View Details →</a>
-          </div>
+  <div class="service-card reveal">
+    <div class="service-icon">
+      <img src="../global-images/engine.jpg" alt="Engine Rebuild">
+    </div>
+    <h3>Engine Rebuild</h3>
+    <p>Precision engine restoration for performance and reliability.</p>
+    <a href="../services/servicedetails.html" class="service-btn">View Details →</a>
+  </div>
 
-          <div class="service-card reveal">
-            <div class="service-icon"><i data-lucide="paintbrush"></i></div>
-            <h3>Paint & Bodywork</h3>
-            <p>Factory-grade paint matching with flawless body restoration.</p>
-            <a href="../services/servicedetails.html" class="service-btn">View Details →</a>
-          </div>
+  <div class="service-card reveal">
+    <div class="service-icon">
+      <img src="../global-images/painting.jpg" alt="Paint & Bodywork">
+    </div>
+    <h3>Paint & Bodywork</h3>
+    <p>Factory-grade paint matching with flawless body restoration.</p>
+    <a href="../services/servicedetails.html" class="service-btn">View Details →</a>
+  </div>
 
-          <div class="service-card reveal">
-            <div class="service-icon"><i data-lucide="armchair"></i></div>
-            <h3>Interior Restoration</h3>
-            <p>Premium upholstery and interior detailing with vintage accuracy.</p>
-            <a href="../services/servicedetails.html" class="service-btn">View Details →</a>
-          </div>
+  <div class="service-card reveal">
+    <div class="service-icon">
+      <img src="../global-images/interior.jpg" alt="Interior Restoration">
+    </div>
+    <h3>Interior Restoration</h3>
+    <p>Premium upholstery and interior detailing with vintage accuracy.</p>
+    <a href="../services/servicedetails.html" class="service-btn">View Details →</a>
+  </div>
 
-          <div class="service-card reveal">
-            <div class="service-icon"><i data-lucide="zap"></i></div>
-            <h3>Electrical Systems</h3>
-            <p>Safe rewiring and restoration of classic electrical systems.</p>
-            <a href="../services/servicedetails.html" class="service-btn">View Details →</a>
-          </div>
+  <div class="service-card reveal">
+    <div class="service-icon">
+      <img src="../global-images/engine-diagnostics.jpeg" alt="Electrical Systems">
+    </div>
+    <h3>Electrical Systems</h3>
+    <p>Safe rewiring and restoration of classic electrical systems.</p>
+    <a href="../services/servicedetails.html" class="service-btn">View Details →</a>
+  </div>
 
-          <div class="service-card reveal">
-            <div class="service-icon"><i data-lucide="hammer"></i></div>
-            <h3>Custom Modifications</h3>
-            <p>Subtle upgrades while preserving classic identity.</p>
-            <a href="../services/servicedetails.html" class="service-btn">View Details →</a>
-          </div>
+  <div class="service-card reveal">
+    <div class="service-icon">
+      <img src="../global-images/detailing.jpg" alt="Custom Modifications">
+    </div>
+    <h3>Custom Modifications</h3>
+    <p>Subtle upgrades while preserving classic identity.</p>
+    <a href="../services/servicedetails.html" class="service-btn">View Details →</a>
+  </div>
 
-        </div>
+</div>
       </div>
     </section>
 
@@ -227,8 +239,8 @@
           </p>
 
           <div class="cta-buttons">
-            <a href="#contact" class="btn primary">Book Inspection</a>
-            <a href="#services" class="btn secondary">Explore Services</a>
+            <a href="#contact" class="btn service-cta-primary">Book Inspection</a>
+            <a href="#services" class="btn service-cta-secondary">Explore Services</a>
           </div>
         </div>
 
@@ -260,6 +272,15 @@
       .then(data => {
         document.getElementById("navbar").innerHTML = data;
         initializeNavbar();
+        const links = document.querySelectorAll('.nav-link');
+    const currentPage = window.location.pathname.split('/').pop();
+
+    links.forEach(link => {
+      const linkPage = link.getAttribute('href').split('/').pop();
+      if (linkPage === currentPage) {
+        link.classList.add('active');
+      }
+    });
         lucide.createIcons();
       });
 

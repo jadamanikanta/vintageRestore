@@ -75,6 +75,7 @@
 
 .hero__buttons {
   display: flex;
+  
   gap: 16px;
 }
 
@@ -178,6 +179,7 @@ html[dir="rtl"] .hero__content {
 
   .hero__buttons {
     display: flex;
+    justify-content: center;
     flex-direction: row;
   }
   .hero__btn {
@@ -201,6 +203,7 @@ html[dir="rtl"] .hero__content {
   .hero__btn {
     width: 80%;
     display: flex;
+    
     justify-content: center;
   }
 }
@@ -1022,7 +1025,7 @@ body.dark .testimonial__card {
 
 
 .btn-primary {
-  background: var(--accent);
+  background: var(--primary);
   color: #fff;
 }
 
@@ -1032,15 +1035,7 @@ body.dark .testimonial__card {
 }
 
 
-.btn-outline {
-  border: 1px solid var(--accent);
-  color: var(--accent);
-}
 
-.btn-outline:hover {
-  background: var(--accent);
-  color: #fff;
-}
 
 
 body.dark .cta::before {

@@ -316,9 +316,6 @@
           Book Workshop
         </a>
 
-        <a href="#process" class="sd-btn-secondary">
-          View Process
-        </a>
 
       </div>
 
@@ -348,7 +345,15 @@ fetch("../components/navbar.html")
   mobileLoginBtn.addEventListener("click", () => {
     window.location.href = "../login.html"; 
   });
+const links = document.querySelectorAll('.nav-link');
+    const currentPage = window.location.pathname.split('/').pop();
 
+    links.forEach(link => {
+      const linkPage = link.getAttribute('href').split('/').pop();
+      if (linkPage === currentPage) {
+        link.classList.add('active');
+      }
+    });
 
     initializeNavbar();
   });

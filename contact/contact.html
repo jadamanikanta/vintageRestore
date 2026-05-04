@@ -29,7 +29,7 @@
 
       <p>
         Have a classic car that needs a new life? Our team is ready to restore it with precision,
-        craftsmanship, and passion. Reach out today — we respond within hours.
+        craftsmanship, and passion. Reach out today-we respond within hours.
       </p>
 
       <div class="cta-buttons">
@@ -42,7 +42,7 @@
           <i data-lucide="message-circle"></i> WhatsApp
         </a>
 
-        <a href="mailto:info@workshop.com" class="btn secondary">
+        <a href="mailto:info@workshop.com" class="btn">
           <i data-lucide="mail"></i> Email Us
         </a>
 
@@ -216,7 +216,7 @@
             <i data-lucide="message-circle"></i> WhatsApp
           </a>
 
-          <a href="#contactForm" class="btn secondary">
+          <a href="#contactForm" class="btn primary">
             <i data-lucide="send"></i> Send Inquiry
           </a>
 
@@ -251,7 +251,15 @@ fetch("../components/navbar.html")
   mobileLoginBtn.addEventListener("click", () => {
     window.location.href = "../login.html"; 
   });
+const links = document.querySelectorAll('.nav-link');
+    const currentPage = window.location.pathname.split('/').pop();
 
+    links.forEach(link => {
+      const linkPage = link.getAttribute('href').split('/').pop();
+      if (linkPage === currentPage) {
+        link.classList.add('active');
+      }
+    });
 
     initializeNavbar();
   });
