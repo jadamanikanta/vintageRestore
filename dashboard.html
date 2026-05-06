@@ -1,427 +1,293 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" data-theme="light">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/png" sizes="184x184" href="../global-images/logo-1.png">
-<title>Vintage Car Restoration Dashboard</title>
-
-<script src="https://cdn.tailwindcss.com"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-<style>
-body{
-    font-family: Georgia, serif;
-    transition:0.4s;
-    overflow:hidden;
-    background:#f8f6f1;
-}
-
-.dark{
-    background:#111827;
-    color:white;
-}
-
-.dark .card{
-    background:#1f2937;
-    color:white;
-}
-
-.dark .sidebar{
-    background:#111827;
-}
-
-.dark .topbar{
-    background:#1f2937;
-}
-
-.dark table{
-    color:white;
-}
-
-
-.bg-animation{
-    position:absolute;
-    inset:0;
-    z-index:-1;
-    overflow:hidden;
-}
-
-.bg-animation span{
-    position:absolute;
-    border-radius:50%;
-    opacity:0.08;
-    animation: float 18s linear infinite;
-}
-
-.bg-animation span:nth-child(1){
-    width:150px;
-    height:150px;
-    background:#d97706;
-    left:10%;
-}
-
-.bg-animation span:nth-child(2){
-    width:200px;
-    height:200px;
-    background:#1e3a8a;
-    left:70%;
-}
-.animate-line{
-    animation: drawline 3s ease forwards;
-}
-
-@keyframes drawline{
-    to{
-        stroke-dashoffset:0;
-    }
-}
-
-.card{
-    box-shadow:0 12px 30px rgba(0,0,0,0.12);
-}
-
-.bg-animation span:nth-child(3){
-    width:120px;
-    height:120px;
-    background:#991b1b;
-    left:45%;
-}
-
-@keyframes float{
-    0%{transform:translateY(100vh);}
-    100%{transform:translateY(-20vh);}
-}
-
-.card{
-    background:white;
-    border-radius:16px;
-    box-shadow:0 8px 20px rgba(0,0,0,0.08);
-}
-
-@media(max-width:1024px){
-    .sidebar{
-        width:80px;
-    }
-    .sidebar span{
-        display:none;
-    }
-}
-
-@media(max-width:768px){
-    .grid-cards{
-        grid-template-columns:1fr;
-    }
-
-    .main-table{
-        overflow-x:auto;
-    }
-}
-</style>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vintage Cars Restoration Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <link rel="stylesheet" href="dashboard.css"/>
 </head>
-<body class="h-screen flex">
+<body>
 
+<div id="sidebarOverlay" class="sidebar-overlay"></div>
 
-<div class="bg-animation">
-    <span></span>
-    <span></span>
-    <span></span>
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-header">
+    <div class="logo-wrap">
+  <a href="../index.html" class="brand-link">
+    <span class="brand-name">
+      <span style="color: var(--primary);">Vintage</span><span style="color: var(--secondary);">Restore</span>
+    </span>
+  </a>
 </div>
-
-
-<div class="sidebar w-64 bg-white shadow-xl flex flex-col justify-between p-5">
-
-    <div>
-        <a href="../index.html" class="block">
-    <h2 class="text-2xl font-bold text-amber-600 mb-8 hover:text-amber-500 transition duration-300">
-        VintageRestore
-    </h2>
-</a>
-
-        <nav class="space-y-4">
-
-            <a href="#" class="flex items-center gap-3 text-gray-700 hover:text-amber-600">
-                <i class="fas fa-chart-line"></i>
-                <span>Dashboard</span>
-            </a>
-
-            <a href="#" class="flex items-center gap-3 text-gray-700 hover:text-amber-600">
-                <i class="fas fa-car"></i>
-                <span>Restoration Projects</span>
-            </a>
-
-            <a href="#" class="flex items-center gap-3 text-gray-700 hover:text-amber-600">
-                <i class="fas fa-users"></i>
-                <span>Clients</span>
-            </a>
-
-            <a href="#" class="flex items-center gap-3 text-gray-700 hover:text-amber-600">
-                <i class="fas fa-tools"></i>
-                <span>Workshop</span>
-            </a>
-
-            <a href="#" class="flex items-center gap-3 text-gray-700 hover:text-amber-600">
-                <i class="fas fa-file-invoice"></i>
-                <span>Invoices</span>
-            </a>
-
-        </nav>
+    <button id="sidebarClose" class="sidebar-close"><i class="fas fa-times"></i></button>
+  </div>
+  <nav class="sidebar-nav">
+    <ul>
+      <li><a href="#" class="nav-link active" data-page="dashboard"><i class="fas fa-gauge-high"></i> Dashboard</a></li>
+      <li><a href="#" class="nav-link" data-page="projects"><i class="fas fa-screwdriver-wrench"></i> Projects</a></li>
+      <li><a href="#" class="nav-link" data-page="gallery"><i class="fas fa-images"></i> Gallery</a></li>
+      <li><a href="#" class="nav-link" data-page="invoices"><i class="fas fa-file-invoice-dollar"></i> Invoices</a></li>
+      <li><a href="#" class="nav-link" data-page="schedule"><i class="fas fa-calendar-check"></i> Schedule</a></li>
+      <li><a href="#" class="nav-link" data-page="timeline"><i class="fas fa-stream"></i> Timeline</a></li>
+      <li><a href="#" class="nav-link" data-page="messages"><i class="fas fa-comments"></i> Messages</a></li>
+      <li><a href="#" class="nav-link" data-page="settings"><i class="fas fa-gear"></i> Settings</a></li>
+    </ul>
+  </nav>
+  <div class="sidebar-footer">
+    <div class="mobile-actions">
+      <a href="#" class="nav-link"><i class="fas fa-bell"></i> Notifications <span class="badge-inline">3</span></a>
+      <a href="#" class="nav-link"><i class="fas fa-user-circle"></i> Profile</a>
     </div>
+    <button id="logoutBtn" class="logout-btn"><i class="fas fa-right-from-bracket"></i> Logout</button>
+  </div>
+</aside>
 
-    <a href="#" class="flex items-center gap-3 text-red-500">
-        <i class="fas fa-sign-out-alt"></i>
-        <span>Logout</span>
-    </a>
+<div class="main-wrapper">
+  <header class="topbar">
+    <div class="topbar-left">
+      <button id="hamburgerBtn" class="hamburger"><i class="fas fa-bars"></i></button>
+      <div class="topbar-logo">
+        <span class="brand-name desktop-brand"><span style="color: var(--primary);">Vintage</span><span style="color: var(--secondary);">Restore</span></span>
+        <span class="brand-name mobile-brand">Welcome</span>
+      </div>
+      <div class="desktop-welcome">Welcome back, Manikanta! </div>
+    </div>
+    <div class="topbar-right">
+      <!-- LTR / RTL Single Button -->
+      <button id="dirToggleBtn" class="dir-btn">RTL</button>
 
+      <!-- Theme Switch -->
+      <div class="theme-toggle" id="themeToggle" title="Toggle Theme">
+  <i class="fas fa-moon" id="themeIcon"></i>
 </div>
 
 
-<div class="flex-1 flex flex-col">
+      <div class="desktop-actions">
+        <div style="position:relative">
+          <button id="notifBtn" class="icon-btn"><i class="fas fa-bell"></i><span class="badge">3</span></button>
+          <div id="notifDropdown" class="notif-dropdown">
+            <div class="notif-title">Notifications</div>
+            <div class="notif-item"><i class="fas fa-check-circle" style="color:var(--green)"></i> Mustang complete</div>
+            <div class="notif-item"><i class="fas fa-exclamation-circle" style="color:var(--red)"></i> Invoice overdue</div>
+          </div>
+        </div>
 
+        <div style="position:relative">
+          <button id="profileBtn" class="icon-btn"><i class="fas fa-user-circle"></i></button>
+          <div id="profileDropdown" class="profile-dropdown">
+            <div class="profile-name">James Wheeler</div>
+            <div class="profile-role">Master Restorer</div>
+            <hr/>
+            <a href="#"><i class="fas fa-user"></i> My Profile</a>
+            <a href="#" id="profileLogout" style="color:var(--red)"><i class="fas fa-right-from-bracket"></i> Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-content">
     
-    <div class="topbar bg-white shadow px-6 py-4 flex justify-between items-center">
-
-        <div>
-            <h1 class="text-2xl font-bold">Admin Dashboard</h1>
-            <p class="text-sm text-gray-500">Welcome back, Vintage Restoration Team 🚗</p>
+    <!-- DASHBOARD -->
+    <section id="page-dashboard" class="page active">
+      <div class="page-header">
+        <h1 class="page-title">Dashboard Overview</h1>
+        <p class="page-sub">Welcome back, James.</p>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon primary-icon"><i class="fas fa-car"></i></div>
+          <div class="stat-info">
+            <span class="stat-num">12</span>
+            <span class="stat-label">Active Projects</span>
+          </div>
         </div>
-
-        <div class="flex items-center gap-4">
-
-            <button id="rtlToggle" class="px-3 py-2 bg-amber-500 rounded-full text-sm">RTL</button>
-
-            <button id="themeToggle" class="p-3 bg-black text-white rounded-full">
-                <i class="fas fa-moon"></i>
-            </button>
-
-            <i class="fas fa-bell text-xl cursor-pointer"></i>
-            <i class="fas fa-user-circle text-2xl cursor-pointer"></i>
-
+        <div class="stat-card">
+          <div class="stat-icon green"><i class="fas fa-circle-check"></i></div>
+          <div class="stat-info">
+            <span class="stat-num">48</span>
+            <span class="stat-label">Completed</span>
+          </div>
         </div>
+        <div class="stat-card">
+          <div class="stat-icon blue"><i class="fas fa-dollar-sign"></i></div>
+          <div class="stat-info">
+            <span class="stat-num">$284K</span>
+            <span class="stat-label">Revenue</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon red"><i class="fas fa-users"></i></div>
+          <div class="stat-info">
+            <span class="stat-num">36</span>
+            <span class="stat-label">Clients</span>
+          </div>
+        </div>
+      </div>
+      <div class="charts-grid">
+        <div class="chart-card">
+          <h2 class="chart-title">Project Status</h2>
+          <div class="chart-wrap"><canvas id="pieChart"></canvas></div>
+        </div>
+        <div class="chart-card">
+          <h2 class="chart-title">Monthly Revenue</h2>
+          <div class="chart-wrap"><canvas id="barChart"></canvas></div>
+        </div>
+        <div class="chart-card wide">
+          <h2 class="chart-title">Restoration Trend</h2>
+          <div class="chart-wrap"><canvas id="lineChart"></canvas></div>
+        </div>
+      </div>
+    </section>
 
-    </div>
+    <!-- PROJECTS -->
+    <section id="page-projects" class="page">
+      <div class="page-header">
+        <h1 class="page-title">Restoration Projects</h1>
+      </div>
+      <div id="projectsGrid" class="projects-grid"></div>
+    </section>
 
-    
-    <div class="p-6 space-y-6 overflow-auto">
+    <!-- GALLERY -->
+    <section id="page-gallery" class="page">
+      <div class="page-header">
+        <h1 class="page-title">Before & After Gallery</h1>
+      </div>
+      <div id="galleryGrid" class="gallery-grid"></div>
+    </section>
 
-        
-        <div class="grid grid-cols-4 gap-4 grid-cards">
+    <!-- INVOICES -->
+    <section id="page-invoices" class="page">
+      <div class="page-header">
+        <h1 class="page-title">Invoices</h1>
+      </div>
+      <div class="glass-card table-wrap">
+        <table class="inv-table">
+          <thead>
+            <tr><th>Invoice</th><th>Client</th><th>Vehicle</th><th>Amount</th><th>Date</th><th>Status</th></tr>
+          </thead>
+          <tbody id="invoiceTableBody"></tbody>
+        </table>
+      </div>
+    </section>
 
-            <div class="card p-5">
-                <h3 class="text-sm text-gray-500">Cars in Progress</h3>
-                <p class="text-3xl font-bold text-amber-600">24</p>
+    <!-- SCHEDULE -->
+    <section id="page-schedule" class="page">
+      <div class="page-header">
+        <h1 class="page-title">Schedule Drop-Off</h1>
+      </div>
+      <div class="glass-card form-card">
+        <form id="scheduleForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Owner Name</label>
+              <input type="text" placeholder="e.g. John Doe" required/>
+            </div>
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="tel" placeholder="+1 000 000 0000" required/>
+            </div>
+          </div>
+          <div class="form-row">
+             <div class="form-group">
+              <label>Car Make & Model</label>
+              <input type="text" placeholder="e.g. 1967 Mustang" required/>
+            </div>
+            <div class="form-group">
+              <label>Drop-Off Date</label>
+              <input type="date" required/>
+            </div>
+          </div>
+          <button type="submit" class="submit-btn"><i class="fas fa-calendar-check"></i> Confirm Booking</button>
+        </form>
+        <div id="formSuccess" class="form-success">
+          <i class="fas fa-check-circle"></i>
+          <h3>Booking Confirmed</h3>
+          <p>We'll contact you shortly!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section id="page-timeline" class="page">
+      <div class="page-header">
+        <h1 class="page-title">Restoration Timeline</h1>
+      </div>
+      <div id="timelineWrap" class="timeline-wrap"></div>
+    </section>
+
+    <!-- MESSAGES -->
+    <section id="page-messages" class="page">
+      <div class="page-header">
+        <h1 class="page-title">Messages</h1>
+      </div>
+      <div class="messages-layout">
+        <div class="glass-card msg-list" id="msgList"></div>
+        <div class="glass-card msg-chat">
+          <div class="chat-header" id="chatHeader"><i class="fas fa-comments"></i> Select a conversation</div>
+          <div class="chat-body" id="chatBody"></div>
+          <div class="chat-input-row">
+            <input type="text" id="chatInput" placeholder="Type a message..."/>
+            <button id="sendMsgBtn"><i class="fas fa-paper-plane"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SETTINGS -->
+    <section id="page-settings" class="page">
+      <div class="settings-wrap">
+        <div class="page-header">
+          <h1 class="page-title">Settings</h1>
+        </div>
+        <div class="settings-grid">
+          <div class="glass-card settings-card">
+            <h2><i class="fas fa-palette"></i> Appearance</h2>
+            <div class="setting-row">
+              <span>Dark Mode</span>
+              <label class="toggle-switch"><input type="checkbox" id="settingsDarkMode" checked/><span class="slider"></span></label>
+            </div>
+            <div class="setting-row">
+              <span>Text Direction</span>
+              <div class="dir-toggle-wrap">
+                <button class="dir-btn sm" id="settingsLtr">LTR</button>
+                <button class="dir-btn sm" id="settingsRtl">RTL</button>
+              </div>
             </div>
 
-            <div class="card p-5">
-                <h3 class="text-sm text-gray-500">Completed Restorations</h3>
-                <p class="text-3xl font-bold text-green-600">132</p>
+          </div>
+          
+          <div class="glass-card settings-card">
+            <h2><i class="fas fa-user-circle"></i> Profile</h2>
+            <div class="form-group" style="margin-bottom:12px">
+              <label>Full Name</label>
+              <input type="text" value="James Wheeler" />
             </div>
-
-            <div class="card p-5">
-                <h3 class="text-sm text-gray-500">Pending Orders</h3>
-                <p class="text-3xl font-bold text-blue-600">17</p>
+            <div class="form-group" style="margin-bottom:12px">
+              <label>Email Address</label>
+              <input type="email" value="james@vintagerestore.com" />
             </div>
-
-            <div class="card p-5">
-                <h3 class="text-sm text-gray-500">Revenue</h3>
-                <p class="text-3xl font-bold text-red-600">$48K</p>
+            <div class="form-group" style="margin-bottom:12px">
+              <label>Phone Number</label>
+              <input type="tel" placeholder="+1 (555) 000-0000" />
             </div>
-
+            <div class="form-group" style="margin-bottom:24px">
+              <label>Role / Position</label>
+              <input type="text" placeholder="e.g. Master Restorer" />
+            </div>
+            <button class="submit-btn" style="width:100%; justify-content:center;">Save Changes</button>
+          </div>
         </div>
+      </div>
+    </section>
 
-        
-        <div class="card p-5">
-            <h2 class="text-xl font-bold mb-4">Restoration Progress</h2>
-
-            <div class="space-y-4">
-
-                <div>
-                    <div class="flex justify-between">
-                        <span>Ford Mustang 1967</span>
-                        <span>80%</span>
-                    </div>
-                    <div class="w-full bg-gray-200 h-3 rounded-full">
-                        <div class="bg-amber-500 h-3 rounded-full w-4/5"></div>
-                    </div>
-                </div>
-
-                <div>
-                    <div class="flex justify-between">
-                        <span>Chevrolet Bel Air</span>
-                        <span>60%</span>
-                    </div>
-                    <div class="w-full bg-gray-200 h-3 rounded-full">
-                        <div class="bg-blue-500 h-3 rounded-full w-3/5"></div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        
-        <div class="card p-5 main-table">
-            <h2 class="text-xl font-bold mb-4">Recent Projects</h2>
-
-            <table class="w-full text-left">
-                <thead>
-                    <tr class="border-b">
-                        <th class="py-2">Car</th>
-                        <th>Status</th>
-                        <th>Client</th>
-                        <th>Deadline</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                    <tr class="border-b">
-                        <td class="py-2">Jaguar E-Type</td>
-                        <td>Painting</td>
-                        <td>John Carter</td>
-                        <td>15 Apr</td>
-                    </tr>
-
-                    <tr class="border-b">
-                        <td class="py-2">Porsche 356</td>
-                        <td>Engine Repair</td>
-                        <td>Emma Stone</td>
-                        <td>22 Apr</td>
-                    </tr>
-
-                    <tr>
-                        <td class="py-2">Mercedes 280SL</td>
-                        <td>Interior Finish</td>
-                        <td>David Lee</td>
-                        <td>29 Apr</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        
-<div class="grid md:grid-cols-2 gap-6">
-
-    
-    <div class="card p-5">
-        <h2 class="text-xl font-bold mb-4">Monthly Restoration Trend</h2>
-
-        <svg viewBox="0 0 500 200" class="w-full h-56">
-            
-            <line x1="50" y1="20" x2="50" y2="180" stroke="#ccc"/>
-            <line x1="50" y1="180" x2="470" y2="180" stroke="#ccc"/>
-
-            
-            <path d="M50 150 
-                     L120 120 
-                     L190 140 
-                     L260 90 
-                     L330 110 
-                     L400 70 
-                     L470 50"
-                  fill="none"
-                  stroke="#d97706"
-                  stroke-width="4"
-                  stroke-linecap="round"
-                  stroke-dasharray="1000"
-                  stroke-dashoffset="1000"
-                  class="animate-line"/>
-
-            
-            <circle cx="120" cy="120" r="5" fill="#d97706"/>
-            <circle cx="190" cy="140" r="5" fill="#d97706"/>
-            <circle cx="260" cy="90" r="5" fill="#d97706"/>
-            <circle cx="330" cy="110" r="5" fill="#d97706"/>
-            <circle cx="400" cy="70" r="5" fill="#d97706"/>
-            <circle cx="470" cy="50" r="5" fill="#d97706"/>
-        </svg>
-    </div>
-
-    
-    <div class="card p-5 flex flex-col items-center justify-center">
-        <h2 class="text-xl font-bold mb-4">Project Completion Rate</h2>
-
-        <div class="relative w-40 h-40">
-            <svg viewBox="0 0 36 36" class="w-full h-full rotate-[-90deg]">
-                <path d="M18 2.0845
-                         a 15.9155 15.9155 0 0 1 0 31.831
-                         a 15.9155 15.9155 0 0 1 0 -31.831"
-                      fill="none"
-                      stroke="#eee"
-                      stroke-width="3"/>
-
-                <path d="M18 2.0845
-                         a 15.9155 15.9155 0 0 1 0 31.831
-                         a 15.9155 15.9155 0 0 1 0 -31.831"
-                      fill="none"
-                      stroke="#10b981"
-                      stroke-width="3"
-                      stroke-dasharray="78, 100"/>
-            </svg>
-
-            <div class="absolute inset-0 flex items-center justify-center text-2xl font-bold">
-                78%
-            </div>
-        </div>
-    </div>
-
+  </main>
 </div>
 
-
-<div class="card p-5 mt-6">
-    <h2 class="text-xl font-bold mb-4">Workshop Efficiency</h2>
-
-    <div class="space-y-4">
-
-        <div>
-            <div class="flex justify-between">
-                <span>Painting</span>
-                <span>85%</span>
-            </div>
-            <div class="w-full bg-gray-200 h-3 rounded-full">
-                <div class="bg-red-500 h-3 rounded-full w-[85%]"></div>
-            </div>
-        </div>
-
-        <div>
-            <div class="flex justify-between">
-                <span>Engine Repair</span>
-                <span>70%</span>
-            </div>
-            <div class="w-full bg-gray-200 h-3 rounded-full">
-                <div class="bg-blue-500 h-3 rounded-full w-[70%]"></div>
-            </div>
-        </div>
-
-        <div>
-            <div class="flex justify-between">
-                <span>Interior Restoration</span>
-                <span>92%</span>
-            </div>
-            <div class="w-full bg-gray-200 h-3 rounded-full">
-                <div class="bg-green-500 h-3 rounded-full w-[92%]"></div>
-            </div>
-        </div>
-
-    </div>
-</div>
-
-    </div>
-
-</div>
-
-<script>
-
-
-document.getElementById('themeToggle').onclick = function(){
-    document.body.classList.toggle('dark');
-};
-
-
-document.getElementById('rtlToggle').onclick = function(){
-    document.documentElement.dir =
-    document.documentElement.dir === 'ltr' ? 'rtl' : 'ltr';
-};
-
-</script>
-
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="dashboard.js"></script>
 </body>
 </html>

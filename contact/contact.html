@@ -329,14 +329,18 @@ menuToggle.addEventListener("click", () => {
 });
 
 // MOBILE DROPDOWN SUPPORT
-const dropdown = document.querySelector(".dropdown");
-const dropdownMenu = document.querySelector(".dropdown-menu");
+const dropdowns = document.querySelectorAll(".dropdown");
 
-dropdown.addEventListener("click", (e) => {
-  if (window.innerWidth <= 768) {
-    e.preventDefault();
-    dropdownMenu.classList.toggle("show");
-  }
+dropdowns.forEach(drop => {
+  const toggleLink = drop.querySelector(".nav-item"); // Home
+  const menu = drop.querySelector(".dropdown-menu");
+
+  toggleLink.addEventListener("click", (e) => {
+    if (window.innerWidth <= 768) {
+      e.preventDefault(); // ✅ block ONLY Home
+      menu.classList.toggle("show");
+    }
+  });
 });
 }
     </script>
