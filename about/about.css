@@ -15,7 +15,7 @@
 .tag {
   display: inline-block;
   padding: 6px 12px;
-  background: rgba(200, 160, 100, 0.15);
+ 
   color: #c8a064;
   border-radius: 20px;
   font-size: 12px;
@@ -48,6 +48,10 @@
   color: white;
   cursor: pointer;
   border-radius: 6px;
+}
+.primary-btn:hover {
+  background: var(--secondary);
+  color: black;
 }
 
 .secondary-btn {
@@ -178,15 +182,24 @@ body[dir="rtl"] .hero {
 
 .story-text {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 22px;
 }
 
 .story-text p {
   font-size: 1.05rem;
-  line-height: 1.8;
-  margin-bottom: 20px;
-  opacity: 0.85;
+  line-height: 2;
+  margin-bottom: 0;
+  opacity: 0.9;
+  color: var(--text);
+  text-align: justify;
+
   transform: translateY(20px);
   transition: 0.6s ease;
+
+  max-width: 650px;
 }
 
 
@@ -412,13 +425,14 @@ body[dir="rtl"] .philosophy-grid {
 }
 
 .workshop-features div {
-  display: flex;              /* Align icon + text in a row */
-  align-items: center;        /* Vertical alignment */
-  gap: 10px;                  /* Space between icon & text */
+  display: flex;              
+  align-items: center;        
+  gap: 10px;                  
   padding: 10px;
   background: rgba(0,0,0,0.05);
   border-radius: 8px;
   font-size: 14px;
+  border: 1px solid black;
 }
 
 /* Icon styling */
@@ -426,8 +440,8 @@ body[dir="rtl"] .philosophy-grid {
   width: 18px;
   height: 18px;
   stroke-width: 2;
-  color: #c8a96a; /* your secondary color */
-  flex-shrink: 0; /* prevent icon shrinking */
+  color: #c8a96a; 
+  flex-shrink: 0; 
 }
 
 
@@ -779,7 +793,7 @@ body[dir="rtl"] .stats-grid {
   margin-bottom: 30px;
 }
 
-.cta-primary {
+.cta-primary-about {
   padding: 14px 24px;
   background: var(--primary);
   color: #fff;
@@ -787,8 +801,12 @@ body[dir="rtl"] .stats-grid {
   border-radius: 8px;
   cursor: pointer;
 }
+.cta-primary-about:hover {
+  background:var(--secondary);
+  color:black;
+}
 
-.cta-secondary {
+.cta-secondary-about {
   padding: 14px 24px;
   background: var(--primary);
   color: #fff;
@@ -798,11 +816,12 @@ body[dir="rtl"] .stats-grid {
   backdrop-filter: blur(8px);
   transition: 0.3s ease;
 }
-
-body.dark .cta-secondary {
-  background: var(--primary);
-  border: 2px solid var(--primary);
+.cta-secondary-about:hover {
+  background:var(--secondary);
+  color:black;
 }
+
+
 
 
 .cta-info {
@@ -813,12 +832,21 @@ body.dark .cta-secondary {
   opacity: 0.7;
   flex-wrap: wrap;
 }
+
 .cta-info i {
-  width: 8px;
-  height: 8px;
-  margin-right: 8px;
+  font-size: 16px;   
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
   vertical-align: middle;
+  stroke-width: 1.5;
+}
+.cta-info svg {
+  width: 16px !important;
+  height: 16px !important;
   stroke-width: 1.8;
+  margin-right: 6px;
+  vertical-align: middle;
 }
 
 
@@ -853,5 +881,20 @@ body[dir="rtl"] .cta-box {
 
   .cta-box h2 {
     font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .cta-info svg {
+    width: 14px !important;
+    height: 14px !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 360px) {
+  .cta-info svg {
+    width: 13px !important;
+    height: 13px !important;
   }
 }

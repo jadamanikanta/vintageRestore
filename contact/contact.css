@@ -33,8 +33,8 @@
 .tag {
   display: inline-block;
   padding: 6px 14px;
-  background: var(--primary);
-  color: #fff;
+  border: 1px solid var(--primary);
+  color: var(--text);
   border-radius: 20px;
   font-size: 12px;
   margin-bottom: 15px;
@@ -61,7 +61,7 @@
   flex-wrap: wrap;
 }
 
-.btn {
+.btn-contact-page {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -73,7 +73,9 @@
   transition: 0.3s ease;
 }
 
-.btn:hover {
+.btn-contact-page:hover {
+  background: var(--secondary);
+  color:black;
   transform: translateY(-3px);
   opacity: 0.9;
 }
@@ -191,12 +193,12 @@ body[dir="rtl"] .cta-buttons {
   border: 1px solid rgba(255,255,255,0.05);
   transition: 0.35s ease;
 
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
 .cp-card:hover {
   transform: translateY(-6px);
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
 
@@ -256,19 +258,41 @@ input:focus, textarea:focus {
 }
 
 
-button {
+.submit-btn-contact {
   width: 100%;
-  padding: 13px;
+  padding: 13px 18px;
+
   border-radius: 12px;
   border: none;
+
   background: var(--primary);
   color: #fff;
+
   font-weight: 500;
+  font-size: 16px;
+
   cursor: pointer;
   transition: 0.3s ease;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
-button:hover {
+.submit-btn-contact svg {
+  width: 18px;
+  height: 18px;
+
+  stroke-width: 2;
+
+  flex-shrink: 0;
+}
+
+.submit-btn-contact:hover {
+  background: var(--secondary);
+  color: black;
+
   transform: translateY(-3px);
   opacity: 0.9;
 }
@@ -383,6 +407,7 @@ body[dir="rtl"] .cp-row {
 
   box-shadow: 0 10px 30px rgba(0,0,0,0.15);
   border: 1px solid rgba(0,0,0,0.08);
+  
 }
 
 
@@ -395,6 +420,7 @@ body[dir="rtl"] .cp-row {
 .map-card h3 {
   margin-bottom: 12px;
   font-size: 18px;
+   color: black;
 }
 
 .map-info p {
@@ -403,7 +429,7 @@ body[dir="rtl"] .cp-row {
   gap: 8px;
   font-size: 14px;
   margin-bottom: 10px;
-  color: var(--text);
+  color: black;
 }
 
 
@@ -431,6 +457,8 @@ body[dir="rtl"] .cp-row {
 }
 
 .map-actions a:hover {
+  background: var(--secondary);
+  color:black;
   opacity: 0.9;
   transform: translateY(-2px);
 }
@@ -529,7 +557,7 @@ body[dir="rtl"] .map-card {
 }
 
 
-.btn {
+.cta-btn-contact {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -541,29 +569,20 @@ body[dir="rtl"] .map-card {
   font-weight: 500;
 
   transition: 0.3s ease;
-}
-
-
-.btn.primary {
   background: var(--primary);
   color: #fff;
 }
 
 
-.btn.secondary {
-  background: transparent;
-  border: 1px solid var(--text);
-  color: var(--text);
-}
-
-
-.btn:hover {
+.cta-btn-contact:hover {
+  background: var(--secondary);
+  color: black;
   transform: translateY(-3px);
   opacity: 0.9;
 }
 
 
-.btn i {
+.cta-btn-contact i {
   width: 18px;
   height: 18px;
 }

@@ -118,6 +118,8 @@ body.light .hero-overlay {
 
 .hero-btn:hover {
     transform: translateY(-4px);
+    background: var(--secondary);
+    color: black;
     box-shadow: 0 10px 30px rgba(0,0,0,0.4);
 }
 
@@ -764,6 +766,8 @@ body.dark .why__card {
 
 .cta__btn.primary:hover {
   transform: translateY(-5px);
+  background: var(--secondary);
+  color: black;
   box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 

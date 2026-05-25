@@ -157,6 +157,11 @@ body.dark .logo {
   border: none;
   font-size: 14px;
 }
+.btn-primary:hover {
+  background: var(--secondary);
+  color: #000;
+  transform: translateY(-3px);
+}
 
 
 .btn-secondary {

@@ -67,6 +67,8 @@ body.dark .hero-box{
 }
 
 .primary-btn:hover{
+  background:var(--secondary);
+  color:#111;
     transform:translateY(-4px);
 }
 
@@ -519,7 +521,7 @@ body.dark .comparison-table tbody tr:nth-child(even) {
   padding: 30px 25px;
   border-radius: 18px;
   text-align: center;
-  border: 1px solid rgba(0,0,0,0.08);
+ 
   transition: all 0.4s ease;
 }
 
@@ -531,6 +533,7 @@ body.dark .addon-card {
 
 .addon-card:hover {
   transform: translateY(-10px);
+   border: 1px solid var(--secondary);
   box-shadow: 0 15px 35px rgba(0,0,0,0.1);
 }
 
@@ -564,10 +567,7 @@ body.dark .addon-icon {
 }
 
 
-.addon-card:hover .addon-icon {
-  border-color: var(--secondary);
-  transform: scale(1.08);
-}
+
 
 
 .addon-card h3 {
@@ -703,12 +703,14 @@ body.dark .pricing-cta {
 
 .primary-cta {
     background: var(--primary);
-    color: var(--bg);
+    color: white;
 }
 
 .primary-cta:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(200,169,106,0.3);
+    background: var(--secondary);
+    color:black;
+    
 }
 
 

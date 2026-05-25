@@ -1,12 +1,16 @@
 
 
 .blog-hero {
+  height:85vh;
   padding: 120px 20px;
   text-align: center;
   background: var(--card);
   position: relative;
   overflow: hidden;
- 
+ display: flex;
+  flex-direction: column;
+  justify-content: center;
+   align-items: center;
 }
 
 
@@ -24,6 +28,7 @@
   z-index: 1;
   max-width: 800px;
   margin: auto;
+  
 }
 
 .tag {

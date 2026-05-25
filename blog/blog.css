@@ -9,6 +9,8 @@ body[dir="rtl"] .blog-hero__container {
 .blog-hero {
   padding: 80px 20px;
   overflow: hidden;
+  background: var(--bg);
+  color: var(--text);
 }
 
 .blog-hero__container {
@@ -53,13 +55,18 @@ body[dir="rtl"] .blog-hero__container {
   gap: 12px;
 }
 
-.btn-primary {
+.btn-primary-blog {
   background: var(--primary);
   color: #fff;
   border: none;
   padding: 10px 18px;
   border-radius: 8px;
   cursor: pointer;
+}
+.btn-primary-blog:hover {
+  background: var(--secondary);
+  color:black;
+  transform: translateY(-3px);
 }
 
 
@@ -122,7 +129,7 @@ body[dir="rtl"] .blog-hero__container {
     font-size: 22px;
   }
 
-  .btn-primary,
+  .btn-primary-blog,
   .btn-secondary {
     padding: 8px 12px;
     font-size: 12px;
@@ -259,6 +266,7 @@ body[dir="rtl"] .story-content {
 .insights {
   padding: 80px 20px;
   background: var(--bg);
+  color: var(--text);
 }
 
 
@@ -292,6 +300,7 @@ body[dir="rtl"] .story-content {
   border: 1px solid transparent;
   box-shadow: 0 5px 18px rgba(0,0,0,0.08);
   transition: 0.3s ease;
+  text-align: center;
 }
 
 .insight-card:hover {
@@ -368,6 +377,7 @@ body[dir="rtl"] .insight-card {
 .before-after {
   padding: 80px 20px;
   background: var(--bg);
+  color:var(--text);
 }
 
 
@@ -505,6 +515,7 @@ body[dir="rtl"] .ba-content {
 .blog-grid-section {
   padding: 80px 20px;
   background: var(--bg);
+  color: var(--text);
 }
 
 
@@ -641,6 +652,7 @@ body[dir="rtl"] .blog-card {
 .workshop {
   padding: 80px 20px;
   background: var(--bg);
+  color:var(--text);
 }
 
 
