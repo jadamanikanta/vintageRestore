@@ -7,9 +7,7 @@
     html {
       scroll-behavior: smooth;
     }
-/* =========================
-   HERO SECTION
-========================== */
+
 .vintage-hero {
   position: relative;
   min-height: 90vh;
@@ -21,11 +19,11 @@
   background:
     linear-gradient(
       120deg,
-      rgba(0, 0, 0, 0.85) 0%,
-      rgba(0, 0, 0, 0.65) 40%,
-      rgba(0, 0, 0, 0.25) 100%
+      rgba(0, 0, 0, 1.05) 0%,
+      rgba(0, 0, 0, 0.75) 40%,
+      rgba(0, 0, 0, 0.35) 100%
     ),
-    url("../global-images/slide2.jpg");
+    url("../global-images/manikanta.jpeg");
 
   background-position: center;
   background-size: cover;
@@ -41,11 +39,11 @@ body.dark .vintage-hero {
   background:
     linear-gradient(
       120deg,
-      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 1.05) 0%,
       rgba(0, 0, 0, 0.7) 45%,
       rgba(0, 0, 0, 0.35) 100%
     ),
-    url("../global-images/slide2.jpg");
+    url("../global-images/manikanta.jpeg");
 
   background-position: center;
   background-size: cover;
