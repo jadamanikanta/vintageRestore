@@ -8,40 +8,46 @@
       scroll-behavior: smooth;
     }
 
-.vintage-hero {
-  position: relative;
-  min-height: 90vh;
-  width: 100%;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
 
+.vintage-hero {
   background:
     linear-gradient(
       120deg,
-      rgba(0, 0, 0, 1.05) 0%,
-      rgba(0, 0, 0, 0.75) 40%,
-      rgba(0, 0, 0, 0.35) 100%
+      rgba(0,0,0,0.95) 0%,
+      rgba(0,0,0,0.85) 40%,
+      rgba(0,0,0,0.10) 100%
     ),
     url("../global-images/manikanta.jpeg");
 
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-
-  transition:
-    background 0.4s ease,
-    color 0.4s ease;
 }
 
 
+html[dir="rtl"] .vintage-hero {
+  background:
+    linear-gradient(
+      -120deg,
+      rgba(0,0,0,0.95) 0%,
+      rgba(0,0,0,0.75) 40%,
+      rgba(0,0,0,0.10) 100%
+    ),
+    url("../global-images/manikanta2.png");
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Dark Mode */
 body.dark .vintage-hero {
   background:
     linear-gradient(
       120deg,
-      rgba(0, 0, 0, 1.05) 0%,
-      rgba(0, 0, 0, 0.7) 45%,
-      rgba(0, 0, 0, 0.35) 100%
+      rgba(0,0,0,1) 0%,
+      rgba(0,0,0,0.85) 40%,
+      rgba(0,0,0,0.20) 100%
     ),
     url("../global-images/manikanta.jpeg");
 
@@ -49,6 +55,24 @@ body.dark .vintage-hero {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+
+body.dark html[dir="rtl"] .vintage-hero,
+html[dir="rtl"] body.dark .vintage-hero {
+  background:
+    linear-gradient(
+      -120deg,
+      rgba(0,0,0,1) 0%,
+      rgba(0,0,0,0.85) 40%,
+      rgba(0,0,0,0.20) 100%
+    ),
+    url("../global-images/manikanta2.png");
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 
     .hero-glow {
       position: absolute;
@@ -286,9 +310,7 @@ body.dark .vintage-hero {
       font-size: 13px;
     }
 
-    /* =========================
-       RTL SUPPORT
-    ========================== */
+    
     html[dir="rtl"] .hero-container {
       direction: rtl;
     }
