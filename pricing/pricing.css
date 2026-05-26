@@ -55,7 +55,7 @@ body.dark .hero-box{
 
 .hero-btn{
     padding:14px 30px;
-    border-radius:30px;
+    border-radius:14px;
     text-decoration:none;
     font-weight:600;
     transition:0.4s;
@@ -693,7 +693,7 @@ body.dark .pricing-cta {
 
 .cta-btn {
     padding: 14px 32px;
-    border-radius: 30px;
+    border-radius: 14px;
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s ease;
