@@ -1,6 +1,4 @@
-/* =========================
-   GLOBAL RESET
-========================= */
+
 
 *,
 *::before,
@@ -866,6 +864,10 @@ body.dark .service__card {
   width: 32px;
   height: 32px;
   stroke-width: 1.8;
+  
+}
+.service__icon svg {
+    color: var(--primary);
 }
 
 
@@ -1498,6 +1500,9 @@ body.dark .why__card {
   width: 34px;
   height: 34px;
   stroke-width: 1.8;
+}
+.why__icon svg {
+    color: var(--primary);
 }
 
 

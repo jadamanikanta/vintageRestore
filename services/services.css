@@ -262,6 +262,7 @@ body[dir="rtl"] .hero-actions {
   text-decoration: none;
   position: relative;
   transition: 0.3s ease;
+  font-weight: 900;
 }
 
 
@@ -501,7 +502,7 @@ body[dir="rtl"] .project-card {
   height: 24px;
 
   stroke-width: 2;
-  color: var(--accent);
+  color: var(--primary);
 
   display: block;
   margin: auto;

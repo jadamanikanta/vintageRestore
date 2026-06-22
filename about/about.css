@@ -170,6 +170,7 @@ body[dir="rtl"] .hero {
 .story-header h2 {
   font-size: 2.5rem;
   margin-top: 10px;
+  color:var(--primary);
 }
 
 
@@ -324,6 +325,9 @@ body[dir="rtl"] .story-content {
   width: 28px;
   height: 28px;
   color: #c8a96a;
+}
+.philosophy-card svg {
+    color: var(--primary);
 }
 
 /* HEADING */

@@ -317,6 +317,10 @@ body[dir="rtl"] .story-content {
   margin-bottom: 12px;
 }
 
+.insight-card svg {
+    color: var(--primary);
+}
+
 
 .insight-card h3 {
   margin: 10px 0;

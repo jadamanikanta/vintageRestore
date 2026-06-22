@@ -226,22 +226,22 @@
   <div class="stats-grid">
 
     <div class="stat-box">
-      <h3 class="counter" data-target="500">0</h3>
+      <h3 class="counter" data-target="500" data-symbol="+">0</h3>
       <p>Cars Restored</p>
     </div>
 
     <div class="stat-box">
-      <h3 class="counter" data-target="20">0</h3>
+      <h3 class="counter" data-target="20" data-symbol="+">0</h3>
       <p>Years of Experience</p>
     </div>
 
     <div class="stat-box">
-      <h3 class="counter" data-target="150">0</h3>
+      <h3 class="counter" data-target="150" data-symbol="+">0</h3>
       <p>Rare Classics Saved</p>
     </div>
 
     <div class="stat-box">
-      <h3 class="counter" data-target="50">0</h3>
+      <h3 class="counter" data-target="50" data-symbol="+">0</h3>
       <p>Expert Technicians</p>
     </div>
 
@@ -323,12 +323,13 @@ fetch("../components/navbar.html")
     
   });
 
-  const counters = document.querySelectorAll(".counter");
+ const counters = document.querySelectorAll(".counter");
 
 const startCounter = (counter) => {
   const target = +counter.getAttribute("data-target");
-  let count = 0;
+  const symbol = counter.getAttribute("data-symbol") || "";
 
+  let count = 0;
   const speed = 30;
 
   const update = () => {
@@ -336,16 +337,18 @@ const startCounter = (counter) => {
 
     if (count < target) {
       count += increment;
-      counter.innerText = Math.ceil(count);
+      counter.innerText = Math.ceil(count) + symbol;
+
       requestAnimationFrame(update);
     } else {
-      counter.innerText = target;
+      counter.innerText = target + symbol;
     }
   };
 
   update();
 };
 
+counters.forEach(counter => startCounter(counter));
 
 const observerCounter = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
