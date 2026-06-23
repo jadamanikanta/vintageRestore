@@ -191,7 +191,7 @@ body[dir="rtl"] .hero-actions {
 
 .service-card {
   background: var(--card);
-  padding: 22px;
+  padding: 25px;
   border-radius: 14px;
   box-shadow: var(--shadow);
   position: relative;

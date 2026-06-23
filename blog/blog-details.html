@@ -4,278 +4,600 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="184x184" href="../global-images/logo-1.png">
-    <title>Vintage Restore</title>
+    <title id="pageTitle">Vintage Restore - Premium Restoration Details</title>
 
+    <!-- Google Fonts for Luxury Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="../global-css/global.css">
-    
     <link rel="stylesheet" href="../blog/blog-details.css">
-    <script src="https://unpkg.com/lucide@latest"></script>
     
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 
+    <!-- Dynamic Header -->
     <div id="navbar"></div>
 
-    <section class="blog-hero reveal">
-  <div class="blog-hero-content">
+    <!-- SECTION 1 — PREMIUM BLOG HERO BANNER -->
+    <section class="blog-hero-premium" id="blogHero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content-wrapper">
+            <span class="premium-badge" id="blogCategory">Category Badge</span>
+            
+            <nav class="breadcrumb-nav">
+                <a href="../index.html">Home</a>
+                <span class="breadcrumb-separator"><i data-lucide="chevron-right"></i></span>
+                <a href="blog.html">Blog</a>
+                <span class="breadcrumb-separator"><i data-lucide="chevron-right"></i></span>
+                <span class="current-crumb" id="breadcrumbTitle">Post Title</span>
+            </nav>
 
-    <span class="tag">Restoration Story</span>
-
-    <h1>1967 Mustang: From Rust to Royalty</h1>
-
-    <div class="meta">
-      <span><i data-lucide="calendar"></i> April 2026</span>
-      <span><i data-lucide="clock"></i> 8 min read</span>
-      <span><i data-lucide="user"></i> MK Workshop Team</span>
-    </div>
-
-  </div>
-</section>
-
-<section class="blog-content reveal">
-
-  <div class="blog-details-container">
-
-    <p>
-      This 1967 Mustang was discovered in a forgotten barn after more than 20 years.
-      Covered in rust, dust, and completely non-functional, it was a true challenge.
-    </p>
-
-    <h2>Initial Condition</h2>
-    <p>
-      The chassis was heavily corroded, engine seized, and interior completely damaged.
-      Every component needed careful inspection before restoration began.
-    </p>
-
-    <img src="../global-images/engine.jpg" alt="Initial condition"/>
-
-    <h2>Disassembly Process</h2>
-    <p>
-      The vehicle was fully dismantled to assess hidden damage and structural issues.
-      Each part was cataloged for restoration or replacement.
-    </p>
-
-    <img src="../global-images/mustang-disassembly.jpeg" alt="Disassembly"/>
-
-    <h2>Engine Rebuild</h2>
-    <p>
-      The engine was completely stripped, cleaned, and rebuilt using precision tools
-      and OEM-spec components for long-term reliability.
-    </p>
-
-    <img src="../global-images/mustang-rebuild.jpeg" alt="Engine rebuild"/>
-
-    <h2>Final Restoration Result</h2>
-    <p>
-      After months of craftsmanship, the Mustang returned to life — restored to showroom condition
-      with its original character preserved.
-    </p>
-
-    <img src="../global-images/mustang-final.jpg" alt="Final result"/>
-
-  </div>
-
-</section>
-
-<section class="tech reveal">
-
-  <div class="blog-details-container">
-
-    <h2>Technical Breakdown</h2>
-    <p class="subtext">Detailed restoration work performed on this vehicle</p>
-
-    <div class="tech-grid">
-
-      <div class="tech-card">
-        <i data-lucide="settings"></i>
-        <h3>Engine Restoration</h3>
-        <p>Fully rebuilt V8 engine with OEM-grade components and precision tuning.</p>
-      </div>
-
-      <div class="tech-card">
-        <i data-lucide="car"></i>
-        <h3>Body Restoration</h3>
-        <p>Complete rust removal, frame strengthening, and structural repair.</p>
-      </div>
-
-      <div class="tech-card">
-        <i data-lucide="paintbrush-2"></i>
-        <h3>Paint Job</h3>
-        <p>Factory-original color restoration with anti-corrosion coating.</p>
-      </div>
-
-      <div class="tech-card">
-        <i data-lucide="cog"></i>
-        <h3>Parts Replacement</h3>
-        <p>OEM + custom fabricated parts used for missing or damaged components.</p>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<section class="author reveal">
-
-  <div class="blog-details-container">
-
-    <div class="author-box">
-
-      <div class="author-img">
-        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e" alt="Workshop Team">
-      </div>
-
-      <div class="author-content">
-
-        <h2> Vintage Restoration Workshop</h2>
-
-        <p>
-          We are a dedicated team of vintage car restoration experts with over a decade of experience
-          in rebuilding classic automobiles with precision, authenticity, and craftsmanship.
-        </p>
-
-        <p>
-          Our mission is to preserve automotive heritage while delivering showroom-quality restorations
-          that bring classic cars back to life.
-        </p>
-
-        <div class="stats">
-
-          <div>
-            <h3>10+ Years</h3>
-            <span>Experience</span>
-          </div>
-
-          <div>
-            <h3>250+</h3>
-            <span>Cars Restored</span>
-          </div>
-
-          <div>
-            <h3>100%</h3>
-            <span>Client Satisfaction</span>
-          </div>
-
+            <h1 class="premium-title" id="blogHeading">Blog Post Title</h1>
+            
+            <div class="hero-meta-bottom">
+                <span class="meta-item"><i data-lucide="user"></i> By <span id="blogAuthor">Author Name</span></span>
+                <span class="meta-item"><i data-lucide="clock"></i> <span id="blogReadTime">X min read</span></span>
+                <span class="meta-item"><i data-lucide="calendar"></i> <span id="blogDate">Publish Date</span></span>
+            </div>
         </div>
+    </section>
 
-      </div>
+    <!-- SECTION 2 — FEATURED IMAGE -->
+    <section class="blog-featured-section reveal">
+        <div class="featured-image-container">
+            <div class="featured-image-wrapper">
+                <img id="blogFeaturedImg" src="" alt="Featured Image">
+            </div>
+        </div>
+    </section>
 
-    </div>
+    <!-- SECTION 3 — ARTICLE CONTENT -->
+    <section class="blog-content-section reveal">
+        <div class="content-container" id="blogContent">
+            <!-- Dynamically populated paragraphs -->
+        </div>
+    </section>
 
-  </div>
+    <!-- SECTION 3.5 — PROJECT SPECIFICATIONS -->
+    <section class="blog-specs-section reveal">
+        <div class="specs-container">
+            <h2 class="section-title">Project Specifications</h2>
+            <p class="section-subtitle">Key restoration details and technical parameters</p>
+            <div class="specs-grid" id="blogSpecsGrid">
+                <!-- Dynamically populated spec cards -->
+            </div>
+        </div>
+    </section>
 
-</section>
+    <!-- SECTION 4 — ARTICLE GALLERY -->
+    <section class="blog-gallery-section reveal">
+        <div class="gallery-container">
+            <h2 class="section-title">Restoration Gallery</h2>
+            <p class="section-subtitle">A visual look into the detailed restoration journey</p>
+            <div class="gallery-grid" id="blogGalleryGrid">
+                <!-- Dynamically populated gallery items -->
+            </div>
+        </div>
+    </section>
 
+    <!-- SECTION 5 — FAQ SECTION (ACCORDION STYLE) -->
+    <section class="blog-faq-section reveal">
+        <div class="faq-container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-subtitle">Expert answers to common questions about this topic</p>
+            <div class="faq-accordion" id="blogFaqAccordion">
+                <!-- Dynamically populated accordion items -->
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6 — RELATED ARTICLES -->
+    <section class="related-articles-section reveal">
+        <div class="related-container">
+            <h2 class="section-title">Related Articles</h2>
+            <p class="section-subtitle">Explore more classic restoration stories and guides</p>
+            <div class="related-grid" id="relatedArticlesGrid">
+                <!-- Dynamically populated remaining 5 cards -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Dynamic Footer -->
     <div id="footer"></div>
 
-    
-
+    <!-- Scripts -->
     <script>
-        
-fetch("../components/navbar.html")
-  .then(res => res.text())
-  .then(data => {
-    document.getElementById("navbar").innerHTML = data;
+        // Blog Posts Database
+        const blogPosts = {
+          1: {
+            category: "Mustang Revival",
+            title: "Mustang Barn Find Revival: Bringing a Forgotten Legend Back to Life",
+            author: "Mustang Specialist",
+            readTime: "8 min read",
+            date: "June 22, 2026",
+            heroBg: "../global-images/gimg-7.jpg",
+            featuredImg: "../global-images/mustang-final.jpg",
+            cardImage: "../global-images/mustang-after.jpeg",
+            cardTitle: "Mustang Barn Find Revival",
+            cardDesc: "Complete transformation story of a forgotten classic.",
+            paragraphs: [
+              "Finding a classic muscle car tucked away in a dusty barn is the ultimate dream for automotive enthusiasts. The 1967 Ford Mustang was discovered under layers of decades-old dust, hidden behind piles of wooden crates and forgotten relics. Though covered in rust and showing signs of neglect, its original body panels, matching-numbers engine block, and classic silhouette remained remarkably intact, presenting a perfect canvas for a full-scale premium revival.",
+              "The initial phase of the restoration focused on complete vehicle disassembly and rust mitigation. The chassis was mounted on a rotisserie, allowing our team to meticulously blast away years of corrosion and apply metal treatments. Every section of sheet metal was inspected, and authentic panels were welded in place to restore structural integrity. The frame was then primed with epoxy to protect it against future environmental damage.",
+              "Under the hood, the original V8 engine underwent a comprehensive rebuild. We sourced period-correct components to restore the engine to its factory-spec horsepower and compression. The transmission, suspension components, and brake systems were entirely replaced or refurbished, upgrading to modern safety standards while preserving the classic driving feel. The body was painted in its iconic original factory color, followed by multiple coats of clear gloss.",
+              "The final step involved detail-oriented interior craftsmanship and road testing. Handcrafted vinyl upholstery, restored original instrumentation, and polished chrome trim brought the cabin back to its showroom glory. After final assembly, the Mustang was subjected to multi-point quality inspections and extensive road testing to ensure it runs as beautifully as it looks. The legend has officially returned to the streets."
+            ],
+            specs: [
+              { label: "Vehicle Model", value: "1967 Ford Mustang V8", icon: "car" },
+              { label: "Project Scope", value: "Full Rotisserie Restore", icon: "wrench" },
+              { label: "Project Timeline", value: "12 - 18 Months", icon: "clock" },
+              { label: "Lead Specialist", value: "Mustang Specialist", icon: "user" }
+            ],
+            gallery: [
+              { src: "../global-images/mustang-before.jpg", category: "Barn Discovery" },
+              { src: "../global-images/bodywork.jpg", category: "Rust Inspection" },
+              { src: "../global-images/mustang-rebuild.jpeg", category: "Restoration Process" },
+              { src: "../global-images/mustang-final.jpg", category: "Finished Mustang" }
+            ],
+            faqs: [
+              { question: "What is a barn find vehicle?", answer: "A barn find vehicle is a classic car or motorcycle that has been discovered after being stored in a barn, garage, shed, or other storage facility for many years, often decades. These vehicles are usually covered in dust, may have rust, but are highly sought after due to their original, untouched condition." },
+              { question: "Is restoring a barn find worth it?", answer: "Yes, restoring a barn find can be highly worth it, both financially and emotionally. Many barn finds are rare, highly desirable models with matching numbers and original components, which significantly increases their market value post-restoration. However, it requires careful budgeting to ensure restoration costs do not exceed the car's final value." },
+              { question: "How long does Mustang restoration take?", answer: "A comprehensive, high-quality restoration of a classic Mustang typically takes between 1,000 to 1,500 hours of labor, which translates to roughly 12 to 18 months depending on the scope of bodywork, parts sourcing, and fabrication required." },
+              { question: "How much does restoration cost?", answer: "The cost of a professional Mustang restoration can vary widely based on the vehicle's initial condition and the desired level of finish. A full frame-off, concourse-level restoration generally ranges from $70,000 to over $150,000." }
+            ]
+          },
+          2: {
+            category: "Engine Guides",
+            title: "Classic Engine Rebuild Guide For Vintage Cars",
+            author: "Lead Engine Machinist",
+            readTime: "10 min read",
+            date: "June 15, 2026",
+            heroBg: "../global-images/engine.jpg",
+            featuredImg: "../global-images/engine.jpg",
+            cardImage: "../global-images/engine.jpg",
+            cardTitle: "Engine Rebuild Guide",
+            cardDesc: "Step-by-step classic engine restoration process.",
+            paragraphs: [
+              "Rebuilding a classic car engine is a painstaking process that combines mechanical skill with historical preservation. Over time, heat, friction, and environmental exposure cause internal wear on pistons, bearings, and cylinder walls. A proper rebuild starts with the careful removal of the engine assembly from the engine bay, followed by a meticulous teardown where every bolt, valve, and spring is cataloged for assessment.",
+              "Once completely disassembled, the components undergo hot-tank cleaning and chemical degreasing to remove decades of carbon buildup. The engine block and cylinder heads are inspected for microscopic cracks using magnetic particle testing. The cylinders are then bored and honed to precise tolerances, matching the specifications of new oversized pistons. The crankshaft is polished or ground, and new main and rod bearings are selected to ensure perfect clearances.",
+              "The cylinder head receives new valves, guides, and hardened seats to make the engine compatible with modern unleaded fuels. Reassembly is performed in a clean-room environment, using torque specifications outlined in historical shop manuals. Every seal, gasket, and fastener is replaced with premium-quality reproductions or upgraded materials to prevent leaks and maximize performance.",
+              "The final phase involves engine break-in and dynamic performance testing. The engine is mounted on a test stand or back in the chassis, where it is monitored closely for oil pressure, coolant temperature, and ignition timing. Through careful tuning of the carburetor and distributor, the engine is optimized to deliver smooth power and that signature classic rumble, ensuring decades of reliable performance ahead."
+            ],
+            specs: [
+              { label: "Engine Type", value: "V8 & Inline-6 Classics", icon: "cpu" },
+              { label: "Rebuild Level", value: "OEM Specifications", icon: "settings" },
+              { label: "Est. Duration", value: "4 - 8 Weeks", icon: "clock" },
+              { label: "Lead Machinist", value: "Engine Specialist", icon: "user" }
+            ],
+            gallery: [
+              { src: "../global-images/aboutimg.jpg", category: "Engine Removal" },
+              { src: "../global-images/gimg-2.jpg", category: "Internal Components" },
+              { src: "../global-images/engine.jpg", category: "Rebuilding Process" },
+              { src: "../global-images/engine-diagnostics.jpeg", category: "Final Engine Testing" }
+            ],
+            faqs: [
+              { question: "Why rebuild an old engine?", answer: "Rebuilding a classic engine restores original compression, reliability, and power. It also addresses decades of internal wear, resolves oil leaks, and updates internal components (like valve seats) to run safely on modern, unleaded fuels without needing additives." },
+              { question: "Can original parts be reused?", answer: "Yes, original major structural components like the engine block, crankshaft, connecting rods, and cylinder heads can often be machined, polished, and reused if they pass integrity and crack tests. Wear items like pistons, rings, bearings, and gaskets are always replaced with new parts." },
+              { question: "How long does engine rebuilding take?", answer: "A professional engine rebuild typically takes between 30 to 60 hours of direct labor. However, due to machining schedules, part inspections, and sourcing rare vintage components, the calendar time can range from 4 to 12 weeks." },
+              { question: "What causes engine wear?", answer: "The primary causes of engine wear in classic cars are friction, heat cycles, oil degradation, and prolonged periods of inactivity. Acidic combustion byproducts and moisture can build up in the oil, causing internal corrosion and accelerated wear on bearings and cylinder walls." }
+            ]
+          },
+          3: {
+            category: "Paint Secrets",
+            title: "Paint Correction Secrets For Showroom Quality Finish",
+            author: "Master Detailer",
+            readTime: "7 min read",
+            date: "June 10, 2026",
+            heroBg: "../global-images/painting.jpg",
+            featuredImg: "../global-images/painting.jpg",
+            cardImage: "../global-images/painting.jpg",
+            cardTitle: "Paint Correction Secrets",
+            cardDesc: "How to achieve showroom-quality finish.",
+            paragraphs: [
+              "Achieving a mirror-like showroom finish on a vintage car requires understanding the art of paint correction. Vintage paint systems, often utilizing single-stage lacquer or early enamel, differ significantly from modern base-coat/clear-coat finishes. Before any polishing begins, a thorough inspection using LED inspection lights and digital paint depth gauges is conducted to assess the thickness and health of the paint layer.",
+              "The correction process starts with decontamination. The surface is thoroughly washed and treated with a clay bar to remove embedded metallic fallout, tar, and overspray. If deep scratches or heavy oxidation are present, wet sanding is carefully performed using ultra-fine abrasive paper. This flattens the paint surface, removing imperfections while ensuring that we preserve as much of the original paint thickness as possible.",
+              "Next comes the multi-stage machine polishing. Using rotary and dual-action polishers, we combine specialized compounding pads and abrasive polishes to systematically remove swirl marks, sanding scratches, and holograms. As the polish breaks down, it refines the surface, transitioning from heavy correction to a finishing polish that coaxes out the depth, clarity, and richness of the color.",
+              "To preserve this intensive work, surface protection is vital. We apply premium ceramic coatings or high-grade carnauba waxes to create a semi-permanent barrier. This layer guards against UV rays, bird droppings, road grime, and light wash scratches. The result is a stunning, high-gloss finish that accentuates the vehicle's classic body lines and stands the test of time under show-field lights."
+            ],
+            specs: [
+              { label: "Detailing Type", value: "Multi-stage Paint Prep", icon: "paintbrush-2" },
+              { label: "Protection", value: "Premium Ceramic Coat", icon: "shield" },
+              { label: "Durability Rating", value: "3 - 5 Years", icon: "calendar" },
+              { label: "Lead Detailer", value: "Master Detailing Tech", icon: "user" }
+            ],
+            gallery: [
+              { src: "../global-images/detailing.jpg", category: "Paint Defects" },
+              { src: "../global-images/painting.jpg", category: "Polishing Stage" },
+              { src: "../global-images/gimg-4.jpg", category: "Paint Correction" },
+              { src: "../global-images/slide2.jpg", category: "Final Shine" }
+            ],
+            faqs: [
+              { question: "What is paint correction?", answer: "Paint correction is the mechanical leveling of clear coat or single-stage paint using specialized dual-action or rotary polishers and abrasive compounds. The process removes surface imperfections like swirl marks, scratches, oxidation, and holograms, restoring absolute clarity and gloss." },
+              { question: "Does paint correction remove scratches?", answer: "Paint correction removes light to moderate scratches that are within the top layer of the clear coat or paint. If a scratch is deep enough to catch your fingernail or has penetrated down to the primer or bare metal, paint correction cannot remove it, and repainting or touch-up is required." },
+              { question: "How long does the shine last?", answer: "With proper maintenance (hand washing with pH-neutral shampoo, avoiding automatic car washes), a corrected paint surface protected by a high-quality ceramic coating can maintain its showroom shine for 3 to 5 years, while a traditional wax or sealant lasts 3 to 6 months." },
+              { question: "Is ceramic coating necessary?", answer: "While not strictly mandatory, a ceramic coating is highly recommended for classic cars after paint correction. It provides a semi-permanent, hydrophobic protective barrier that repels water, prevents UV fading, and makes washing easier, shielding your investment." }
+            ]
+          },
+          4: {
+            category: "Buying Guides",
+            title: "Essential Guide Before Buying A Vintage Car",
+            author: "Classic Evaluator",
+            readTime: "9 min read",
+            date: "June 05, 2026",
+            heroBg: "../global-images/slide1.jpg",
+            featuredImg: "../global-images/slide1.jpg",
+            cardImage: "../global-images/slide1.jpg",
+            cardTitle: "Buying Vintage Cars Guide",
+            cardDesc: "What to check before buying a classic vehicle.",
+            paragraphs: [
+              "Purchasing a vintage car is an exciting milestone, but it requires a disciplined approach to avoid costly mistakes. Unlike modern vehicles, classic cars carry unique histories of repairs, modifications, and environmental exposure. The first and most critical step is verifying the vehicle's documentation, including the chassis and engine serial numbers, to confirm authenticity, matching-numbers status, and ownership history.",
+              "A physical inspection must begin with the structural frame and chassis. Rust is the greatest enemy of classic cars; while mechanical parts can be replaced, structural rust repair is incredibly expensive and labor-intensive. Use a magnet or a paint depth gauge to check lower body panels, floor pans, trunk floors, and suspension mounting points for hidden rust or body filler indicating past accident damage.",
+              "Evaluate the mechanical health by checking the engine cold start, exhaust smoke, oil pressure, and cooling system performance. Inspect the suspension, steering, and braking components for excessive play, leaks, or wear. A test drive is essential to check transmission shifts, clutch engagement, and overall road behavior, ensuring that the car handles safely and predictably.",
+              "Finally, assess the completeness and quality of the interior and trim. Original gauges, knobs, chrome trim, and upholstery can be extremely difficult and expensive to source. Balance the purchase price against the estimated cost of repairs or restoration. Choosing the right car—whether a running driver or a project car—ensures your vintage ownership journey is a rewarding investment."
+            ],
+            specs: [
+              { label: "Inspection Type", value: "120-Point Evaluator", icon: "clipboard-check" },
+              { label: "Primary Focus", value: "Chassis Rust & VINs", icon: "search" },
+              { label: "Buyer Level", value: "Intermediate Buyer", icon: "award" },
+              { label: "Lead Consultant", value: "Classic Evaluator", icon: "user" }
+            ],
+            gallery: [
+              { src: "../global-images/slide3.jpg", category: "Vintage Car Inspection" },
+              { src: "../global-images/fabrication.jpg", category: "Chassis Review" },
+              { src: "../global-images/interior.jpg", category: "Interior Check" },
+              { src: "../global-images/slide1.jpg", category: "Purchase Decision" }
+            ],
+            faqs: [
+              { question: "What documents are required?", answer: "When buying a vintage car, you require a clean and clear title, a bill of sale, and any historical documentation (service records, restoration logs, import documents). Ensure that the VIN/chassis number matches the title exactly to avoid registration issues." },
+              { question: "How do I verify originality?", answer: "Verifying originality involves checking the Vehicle Identification Number (VIN), cowl tags, and engine block numbers against historical manufacturer databases or certificate archives (such as Porsche COA or Marti Reports). 'Matching numbers' means the engine and transmission are the original units installed at the factory." },
+              { question: "Should I buy a project car?", answer: "Buying a project car is highly rewarding if you have the mechanical skills, tools, time, and budget. However, if you plan to pay professionals for all the work, it is almost always more cost-effective to buy a classic car that has already been restored." },
+              { question: "What is the biggest risk?", answer: "The biggest risk is hidden rust and structural damage masked by body filler and fresh paint. Rust repair is the most expensive aspect of restoration and can quickly make a project financially unviable." }
+            ]
+          },
+          5: {
+            category: "Jaguar Revival",
+            title: "Restoring The Legendary Jaguar E-Type",
+            author: "Classic British Restorer",
+            readTime: "12 min read",
+            date: "May 28, 2026",
+            heroBg: "../global-images/jaguar.jpeg",
+            featuredImg: "../global-images/jaguar.jpeg",
+            cardImage: "../global-images/jaguar.jpeg",
+            cardTitle: "Jaguar E-Type Restoration",
+            cardDesc: "Luxury classic brought back to life.",
+            paragraphs: [
+              "The Jaguar E-Type is widely regarded as one of the most beautiful automobiles ever created, making its restoration a true labor of love. When a classic Series 1 E-Type arrived at our workshop, it was showing signs of its age, with faded paint, worn leather, and an engine in need of revitalization. Our mission was to perform a concourse-level restoration that would honor its heritage and return it to pristine condition.",
+              "The restoration began with a complete strip-down to the bare monocoque chassis. The body shell was media-blasted to remove old paint and rust, exposing the steel panels. Our metal fabrication team carefully repaired structural areas, aligning the famous long bonnet and ensuring all panel gaps were perfectly consistent. The body was then block-sanded to perfection before applying the classic British Racing Green paint.",
+              "The legendary 3.8-liter triple-carbureted engine was disassembled, balanced, and rebuilt with brand-new internal components. The independent rear suspension, a hallmark of the E-Type's handling, was fully rebuilt with new dampers, bushings, and rebuilt inboard disc brakes. All exterior chrome pieces were stripped, repaired, and replated to a brilliant showroom shine.",
+              "Inside, our team recreated the interior using authentic materials and factory patterns. From the leather bucket seats and classic dashboard switches to the wooden steering wheel, every detail was carefully crafted. The restored Jaguar E-Type was unveiled to the owner, showcasing the ultimate blend of classic British design, mechanical precision, and timeless elegance."
+            ],
+            specs: [
+              { label: "Vehicle Model", value: "Jaguar E-Type Series 1", icon: "car" },
+              { label: "Engine Spec", value: "3.8L Inline-6 VVT", icon: "cpu" },
+              { label: "Original Color", value: "British Racing Green", icon: "palette" },
+              { label: "Lead Restorer", value: "British Specialist", icon: "user" }
+            ],
+            gallery: [
+              { src: "../global-images/jaguar-before.jpeg", category: "Original Vehicle" },
+              { src: "../global-images/bodywork.jpg", category: "Body Restoration" },
+              { src: "../global-images/interior.jpg", category: "Interior Craftsmanship" },
+              { src: "../global-images/jaguar.jpeg", category: "Final Reveal" }
+            ],
+            faqs: [
+              { question: "Why is the E-Type iconic?", answer: "The Jaguar E-Type is iconic due to its revolutionary aerodynamic design by Malcolm Sayer, its impressive performance (capable of 150 mph in 1961), and its affordability relative to competitors. Enzo Ferrari famously called it 'the most beautiful car ever made.'" },
+              { question: "How difficult is restoration?", answer: "Jaguar E-Type restorations are highly complex due to the unique monocoque chassis, the intricate front subframe tubing, the complex triple-carbureted inline-6 engine, and the inboard rear brakes. It requires specialist knowledge and precision metalwork." },
+              { question: "Are original parts available?", answer: "Yes, the support for Jaguar E-Type parts is excellent. A wide range of original, reproduction, and upgraded components are readily available through specialized manufacturers and distributors, making sourcing parts easier than for many other classics." },
+              { question: "How much value does restoration add?", answer: "A professional, concourse-level restoration can double or triple the value of an E-Type, pushing its market value to $150,000–$250,000+ for rare Series 1 models, depending on originality, documentation, and quality of finish." }
+            ]
+          },
+          6: {
+            category: "Diagnostics",
+            title: "Understanding Classic Engine Diagnostic Techniques",
+            author: "Classic Diagnostic Tech",
+            readTime: "8 min read",
+            date: "May 20, 2026",
+            heroBg: "../global-images/engine-diagnostics.jpeg",
+            featuredImg: "../global-images/engine-diagnostics.jpeg",
+            cardImage: "../global-images/engine-diagnostics.jpeg",
+            cardTitle: "Classic Engine Diagnostics",
+            cardDesc: "Understanding old engine performance issues.",
+            paragraphs: [
+              "Diagnosing mechanical issues in vintage engines requires a blend of traditional diagnostic skills and simple, reliable equipment. Unlike modern engines managed by computers and sensors, classic engines rely on mechanical adjustments, analog distributors, and carbureted fuel systems. Understanding how to interpret compression readings, ignition sparks, and vacuum levels is key to identifying performance faults.",
+              "A compression test is the first step in evaluating general engine health. By measuring the pressure built up in each cylinder, we can identify issues like worn piston rings, burnt valves, or blown head gaskets. Consistent readings across all cylinders indicate a healthy engine block, while low readings in adjacent cylinders point to structural pressure leaks that require immediate mechanical attention.",
+              "The ignition system is another common source of misfires and hard starts. We inspect the distributor points, condenser, rotor, and spark plugs for wear or improper gapping. Using an analog timing light, we verify the ignition timing against factory specifications. Analyzing the fuel-air mixture delivery involves inspecting fuel filters, pump pressure, and carburetor float levels to ensure proper combustion.",
+              "Finally, we conduct a cooling system pressure test and analyze the exhaust gases to optimize engine performance. Detecting radiator leaks, faulty thermostats, or lean/rich fuel mixtures early prevents engine overheating and catastrophic wear. Regular diagnostic checks keep vintage engines running smoothly, preserving their performance and driving enjoyment for miles to come."
+            ],
+            specs: [
+              { label: "Diagnostic Focus", value: "Ignition & Combustion", icon: "activity" },
+              { label: "Primary Tools", value: "Timing Light & Gauges", icon: "wrench" },
+              { label: "Interval Check", value: "Annual / 3k Miles", icon: "refresh-cw" },
+              { label: "Diagnostic Tech", value: "Engine Tuner", icon: "user" }
+            ],
+            gallery: [
+              { src: "../global-images/engine-diagnostics.jpeg", category: "Diagnostic Equipment" },
+              { src: "../global-images/engine.jpg", category: "Compression Testing" },
+              { src: "../global-images/gimg-2.jpg", category: "Fuel Inspection" },
+              { src: "../global-images/feature2.jpg", category: "Performance Analysis" }
+            ],
+            faqs: [
+              { question: "Why does a vintage engine misfire?", answer: "Misfires in classic engines are typically caused by worn or incorrectly gapped ignition points, a failing condenser, corroded spark plugs, vacuum leaks around the carburetor base, or a fuel delivery issue." },
+              { question: "What causes overheating?", answer: "Classic engine overheating is often caused by a clogged radiator core, a failing mechanical water pump, a stuck thermostat, incorrect ignition timing (running too lean), or mineral scale buildup inside the engine block's cooling passages." },
+              { question: "How often should diagnostics be performed?", answer: "For classic cars driven occasionally, a comprehensive diagnostic tune-up (compression check, timing verification, carburetor adjustment) should be performed once a year or every 3,000 miles to ensure optimal performance." },
+              { question: "Can diagnostics prevent major repairs?", answer: "Absolutely. Regular diagnostics like compression tests and oil analysis can detect early signs of valve wear, cylinder leaks, or bearing failure, allowing you to address issues before they lead to catastrophic engine damage." }
+            ]
+          },
+          7: {
+            category: "Jaguar Revival",
+            title: "Restoring The Legendary Jaguar E-Type",
+            author: "Classic British Restorer",
+            readTime: "12 min read",
+            date: "May 28, 2026",
+            heroBg: "../global-images/jaguar.jpeg",
+            featuredImg: "../global-images/jaguar.jpeg",
+            cardImage: "../global-images/jaguar.jpeg",
+            cardTitle: "Jaguar E-Type Restoration",
+            cardDesc: "Luxury classic brought back to life.",
+            paragraphs: [
+              "The Jaguar E-Type is widely regarded as one of the most beautiful automobiles ever created, making its restoration a true labor of love. When a classic Series 1 E-Type arrived at our workshop, it was showing signs of its age, with faded paint, worn leather, and an engine in need of revitalization. Our mission was to perform a concourse-level restoration that would honor its heritage and return it to pristine condition.",
+              "The restoration began with a complete strip-down to the bare monocoque chassis. The body shell was media-blasted to remove old paint and rust, exposing the steel panels. Our metal fabrication team carefully repaired structural areas, aligning the famous long bonnet and ensuring all panel gaps were perfectly consistent. The body was then block-sanded to perfection before applying the classic British Racing Green paint.",
+              "The legendary 3.8-liter triple-carbureted engine was disassembled, balanced, and rebuilt with brand-new internal components. The independent rear suspension, a hallmark of the E-Type's handling, was fully rebuilt with new dampers, bushings, and rebuilt inboard disc brakes. All exterior chrome pieces were stripped, repaired, and replated to a brilliant showroom shine.",
+              "Inside, our team recreated the interior using authentic materials and factory patterns. From the leather bucket seats and classic dashboard switches to the wooden steering wheel, every detail was carefully crafted. The restored Jaguar E-Type was unveiled to the owner, showcasing the ultimate blend of classic British design, mechanical precision, and timeless elegance."
+            ],
+            specs: [
+              { label: "Vehicle Model", value: "Jaguar E-Type Series 1", icon: "car" },
+              { label: "Engine Spec", value: "3.8L Inline-6 VVT", icon: "cpu" },
+              { label: "Original Color", value: "British Racing Green", icon: "palette" },
+              { label: "Lead Restorer", value: "British Specialist", icon: "user" }
+            ],
+            gallery: [
+              { src: "../global-images/jaguar-before.jpeg", category: "Original Vehicle" },
+              { src: "../global-images/bodywork.jpg", category: "Body Restoration" },
+              { src: "../global-images/interior.jpg", category: "Interior Craftsmanship" },
+              { src: "../global-images/jaguar.jpeg", category: "Final Reveal" }
+            ],
+            faqs: [
+              { question: "Why is the E-Type iconic?", answer: "The Jaguar E-Type is iconic due to its revolutionary aerodynamic design by Malcolm Sayer, its impressive performance (capable of 150 mph in 1961), and its affordability relative to competitors. Enzo Ferrari famously called it 'the most beautiful car ever made.'" },
+              { question: "How difficult is restoration?", answer: "Jaguar E-Type restorations are highly complex due to the unique monocoque chassis, the intricate front subframe tubing, the complex triple-carbureted inline-6 engine, and the inboard rear brakes. It requires specialist knowledge and precision metalwork." },
+              { question: "Are original parts available?", answer: "Yes, the support for Jaguar E-Type parts is excellent. A wide range of original, reproduction, and upgraded components are readily available through specialized manufacturers and distributors, making sourcing parts easier than for many other classics." },
+              { question: "How much value does restoration add?", answer: "A professional, concourse-level restoration can double or triple the value of an E-Type, pushing its market value to $150,000–$250,000+ for rare Series 1 models, depending on originality, documentation, and quality of finish." }
+            ]
+          }
+        };
 
-    
-  const loginBtn = document.getElementById("loginBtn");
-  loginBtn.addEventListener("click", () => {
-    window.location.href = "../login.html"; 
-  });
-  const mobileLoginBtn = document.getElementById("mobileLoginBtn");
-  mobileLoginBtn.addEventListener("click", () => {
-    window.location.href = "../login.html"; 
-  });
+        // Render Active Blog Post Content
+        function loadBlogPost() {
+          const params = new URLSearchParams(window.location.search);
+          let blogId = parseInt(params.get("id")) || 1;
+          
+          // Fallback to post 1 if invalid ID is passed
+          if (!blogPosts[blogId]) {
+            blogId = 1;
+          }
 
-const links = document.querySelectorAll('.nav-link');
-    const currentPage = window.location.pathname.split('/').pop();
+          const post = blogPosts[blogId];
 
-    links.forEach(link => {
-      const linkPage = link.getAttribute('href').split('/').pop();
-      if (linkPage === currentPage) {
-        link.classList.add('active');
-      }
-    });
-    initializeNavbar();
-  });
+          // 1. Update Title and Hero Section
+          document.title = `${post.cardTitle} - Vintage Restore`;
+          document.getElementById("pageTitle").textContent = `${post.cardTitle} - Vintage Restore`;
+          
+          document.getElementById("blogCategory").textContent = post.category;
+          document.getElementById("breadcrumbTitle").textContent = post.cardTitle;
+          document.getElementById("blogHeading").textContent = post.title;
+          document.getElementById("blogAuthor").textContent = post.author;
+          document.getElementById("blogReadTime").textContent = post.readTime;
+          document.getElementById("blogDate").textContent = post.date;
+          
+          // Apply background image dynamically to Hero Banner
+          const heroSec = document.getElementById("blogHero");
+          heroSec.style.backgroundImage = `linear-gradient(to bottom, rgba(0,0,0,0.65), rgba(0,0,0,0.85)), url("${post.heroBg}")`;
 
-  fetch("../components/footer.html")
-  .then(res => res.text())
-  .then(data => {
-    document.getElementById("footer").innerHTML = data;
-    
-    const mobileLoginBtn = document.getElementById("homepage-redirect");
-  mobileLoginBtn.addEventListener("click", () => {
-    window.location.href = "../index.html"; 
-  });
-    
-  });
-const revealElements = document.querySelectorAll(".reveal");
+          // 2. Update Featured Image
+          const featuredImg = document.getElementById("blogFeaturedImg");
+          featuredImg.src = post.featuredImg;
+          featuredImg.alt = post.title;
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("active");
-    }
-  });
-}, { threshold: 0.2 });
+          // 3. Update Paragraphs
+          const contentContainer = document.getElementById("blogContent");
+          contentContainer.innerHTML = post.paragraphs.map(p => `<p class="content-paragraph">${p}</p>`).join("");
 
-revealElements.forEach(el => observer.observe(el));
+          // 3.5. Update Specifications
+          const specsContainer = document.getElementById("blogSpecsGrid");
+          specsContainer.innerHTML = post.specs.map(spec => `
+            <div class="spec-card">
+                <div class="spec-icon-wrapper">
+                    <i data-lucide="${spec.icon}"></i>
+                </div>
+                <span class="spec-label">${spec.label}</span>
+                <span class="spec-value">${spec.value}</span>
+            </div>
+          `).join("");
 
-lucide.createIcons();
+          // 4. Update Gallery
+          const galleryContainer = document.getElementById("blogGalleryGrid");
+          galleryContainer.innerHTML = post.gallery.map(img => `
+            <div class="gallery-item">
+                <div class="image-wrapper">
+                    <img src="${img.src}" alt="${img.category}">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">${img.category}</span>
+                    </div>
+                </div>
+            </div>
+          `).join("");
 
+          // 5. Update FAQs (Accordion style)
+          const faqContainer = document.getElementById("blogFaqAccordion");
+          faqContainer.innerHTML = post.faqs.map((faq, index) => `
+            <div class="faq-item">
+                <button class="faq-question-btn" aria-expanded="false">
+                    <span>${faq.question}</span>
+                    <i data-lucide="plus" class="faq-icon"></i>
+                </button>
+                <div class="faq-answer-panel">
+                    <p class="faq-answer-text">${faq.answer}</p>
+                </div>
+            </div>
+          `).join("");
 
-document.querySelectorAll(".author-box").forEach(box => {
-  box.addEventListener("mouseenter", () => {
-    box.style.transition = "0.3s ease";
-  });
-});
+          // 6. Update Related Articles (Remaining 5 articles)
+          const relatedContainer = document.getElementById("relatedArticlesGrid");
+          const relatedPosts = Object.keys(blogPosts).filter(id => parseInt(id) !== blogId);
+          
+          relatedContainer.innerHTML = relatedPosts.map(id => {
+            const relPost = blogPosts[id];
+            return `
+              <div class="related-card">
+                  <div class="card-img-wrapper">
+                      <img src="${relPost.cardImage}" alt="${relPost.cardTitle}">
+                  </div>
+                  <div class="card-content">
+                      <h3 class="card-title">${relPost.cardTitle}</h3>
+                      <p class="card-text">${relPost.cardDesc}</p>
+                      <a href="blog-details.html?id=${id}" class="card-link-btn">Read Article <i data-lucide="arrow-right"></i></a>
+                  </div>
+              </div>
+            `;
+          }).join("");
 
-// NAVBAR LOGIC
-function initializeNavbar() {
+          // Re-initialize Lucide Icons after DOM updates
+          lucide.createIcons();
 
-  const themeToggle = document.getElementById("themeToggle");
-  lucide.createIcons();
-  themeToggle.addEventListener("click", () => {
-    document.body.classList.toggle("dark");
-    themeToggle.innerHTML = document.body.classList.contains("dark")
-      ? '<i data-lucide="sun"></i>'
-      : '<i data-lucide="moon"></i>';
-    lucide.createIcons();
-  });
+          // Setup FAQ Accordion Toggling
+          setupAccordion();
+        }
 
-// RTL
-const rtlToggle = document.getElementById("rtlToggle");
+        // Accordion functionality with smooth animation height calculation
+        function setupAccordion() {
+          const buttons = document.querySelectorAll(".faq-question-btn");
+          buttons.forEach(btn => {
+            btn.addEventListener("click", () => {
+              const panel = btn.nextElementSibling;
+              const isExpanded = btn.getAttribute("aria-expanded") === "true";
+              
+              // Close all other panels for clean accordian behavior
+              buttons.forEach(otherBtn => {
+                if (otherBtn !== btn) {
+                  otherBtn.setAttribute("aria-expanded", "false");
+                  otherBtn.nextElementSibling.style.maxHeight = null;
+                  otherBtn.querySelector(".faq-icon").setAttribute("data-lucide", "plus");
+                }
+              });
 
-rtlToggle.addEventListener("click", () => {
-  const isRTL = document.documentElement.dir === "rtl";
-  document.documentElement.dir = isRTL ? "ltr" : "rtl";
-});
+              // Toggle current panel
+              if (isExpanded) {
+                btn.setAttribute("aria-expanded", "false");
+                panel.style.maxHeight = null;
+                btn.querySelector(".faq-icon").setAttribute("data-lucide", "plus");
+              } else {
+                btn.setAttribute("aria-expanded", "true");
+                panel.style.maxHeight = panel.scrollHeight + "px";
+                btn.querySelector(".faq-icon").setAttribute("data-lucide", "minus");
+              }
+              
+              // Reinitialize lucide to change icons instantly
+              lucide.createIcons();
+            });
+          });
+        }
 
-// MOBILE MENU
-const menuToggle = document.getElementById("menuToggle");
-const navMenu = document.getElementById("navMenu");
+        // Fetch Navbar dynamically
+        fetch("../components/navbar.html")
+          .then(res => res.text())
+          .then(data => {
+            document.getElementById("navbar").innerHTML = data;
 
-menuToggle.addEventListener("click", () => {
-  navMenu.classList.toggle("active");
-});
+            const loginBtn = document.getElementById("loginBtn");
+            loginBtn.addEventListener("click", () => {
+              window.location.href = "../login.html"; 
+            });
+            const mobileLoginBtn = document.getElementById("mobileLoginBtn");
+            mobileLoginBtn.addEventListener("click", () => {
+              window.location.href = "../login.html"; 
+            });
 
-// MOBILE DROPDOWN SUPPORT
-const dropdowns = document.querySelectorAll(".dropdown");
+            const links = document.querySelectorAll('.nav-link');
+            const currentPage = window.location.pathname.split('/').pop();
 
-dropdowns.forEach(drop => {
-  const toggleLink = drop.querySelector(".nav-item"); // Home
-  const menu = drop.querySelector(".dropdown-menu");
+            links.forEach(link => {
+              const linkPage = link.getAttribute('href').split('/').pop();
+              if (linkPage === currentPage) {
+                link.classList.add('active');
+              }
+            });
+            initializeNavbar();
+          });
 
-  toggleLink.addEventListener("click", (e) => {
-    if (window.innerWidth <= 768) {
-      e.preventDefault(); // ✅ block ONLY Home
-      menu.classList.toggle("show");
-    }
-  });
-});
-}
+        // Fetch Footer dynamically
+        fetch("../components/footer.html")
+          .then(res => res.text())
+          .then(data => {
+            document.getElementById("footer").innerHTML = data;
+            
+            const mobileLoginBtn = document.getElementById("homepage-redirect");
+            mobileLoginBtn.addEventListener("click", () => {
+              window.location.href = "../index.html"; 
+            });
+          });
+
+        // Intersection Observer for scroll reveal animations
+        const revealElements = document.querySelectorAll(".reveal");
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("active");
+            }
+          });
+        }, { threshold: 0.1 });
+
+        // Load Content and initialize page details
+        loadBlogPost();
+
+        // Observe elements for animations after rendering
+        document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+
+        // Navbar toggling logic
+        function initializeNavbar() {
+          const themeToggle = document.getElementById("themeToggle");
+          lucide.createIcons();
+          
+          themeToggle.addEventListener("click", () => {
+            document.body.classList.toggle("dark");
+            themeToggle.innerHTML = document.body.classList.contains("dark")
+              ? '<i data-lucide="sun"></i>'
+              : '<i data-lucide="moon"></i>';
+            lucide.createIcons();
+          });
+
+          const rtlToggle = document.getElementById("rtlToggle");
+          rtlToggle.addEventListener("click", () => {
+            const isRTL = document.documentElement.dir === "rtl";
+            document.documentElement.dir = isRTL ? "ltr" : "rtl";
+          });
+
+          const menuToggle = document.getElementById("menuToggle");
+          const navMenu = document.getElementById("navMenu");
+
+          menuToggle.addEventListener("click", () => {
+            navMenu.classList.toggle("active");
+          });
+
+          const dropdowns = document.querySelectorAll(".dropdown");
+          dropdowns.forEach(drop => {
+            const toggleLink = drop.querySelector(".nav-item");
+            const menu = drop.querySelector(".dropdown-menu");
+
+            toggleLink.addEventListener("click", (e) => {
+              if (window.innerWidth <= 768) {
+                e.preventDefault();
+                menu.classList.toggle("show");
+              }
+            });
+          });
+        }
     </script>
 </body>
 </html>
