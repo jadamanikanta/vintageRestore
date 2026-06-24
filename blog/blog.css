@@ -298,7 +298,7 @@ body[dir="rtl"] .story-content {
   padding: 22px;
   border-radius: 14px;
   border: 1px solid transparent;
-  box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   transition: 0.3s ease;
   text-align: center;
 }
@@ -455,6 +455,9 @@ body[dir="rtl"] .insight-card {
   font-weight: bold;
   text-decoration: none;
 }
+.ba-content a:hover{
+  border-bottom: 1px solid var(--primary);
+}
 
 
 body[dir="rtl"] .ba-content {
@@ -606,6 +609,9 @@ body[dir="rtl"] .ba-content {
   color: var(--primary);
   text-decoration: none;
   font-weight: bold;
+}
+.blog-card a:hover{
+  border-bottom: 1px solid var(--primary);
 }
 
 

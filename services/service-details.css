@@ -127,7 +127,7 @@ body[dir="rtl"] .sd-hero-actions {
   --card: #f7f7f7;
   --border: rgba(0,0,0,0.08);
   --accent: #b08d57;
-  --shadow: 0 10px 25px rgba(0,0,0,0.08);
+  --shadow:rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 

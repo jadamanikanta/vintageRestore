@@ -626,7 +626,7 @@ body.dark {
   border-radius: 12px;
   text-align: center;
   flex: 1;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
   transition: 0.3s;
 }
 
@@ -808,7 +808,7 @@ body.dark .about__stat {
   padding: 30px 20px;
   border-radius: 16px;
   transition: all 0.6s ease;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   cursor: pointer;
   position: relative;
   overflow: hidden;
@@ -1477,7 +1477,7 @@ body.dark .cta::before {
   padding: 25px;
   border-radius: 16px;
   transition: 0.3s ease;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   text-align: center;
 }
 

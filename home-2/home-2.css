@@ -435,7 +435,7 @@ body.dark .about__stat {
   padding: 25px;
   border-radius: 16px;
   transition: 0.3s ease;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+ box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   cursor: pointer;
 }
 
@@ -597,6 +597,7 @@ body.dark .service__card {
   transition: 0.3s ease;
   opacity: 0;
   transform: translateY(40px);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 body.dark .why__card {
