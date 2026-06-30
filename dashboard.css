@@ -94,6 +94,112 @@ canvas { max-width: 100%; }
 }
 .logo-wrap { display: flex; align-items: center; gap: 12px; white-space: nowrap; }
 .logo-icon { font-size: 1.8rem; color: var(--primary); text-shadow: 0 0 12px var(--primary-glow); }
+
+.brand-link {
+    display: flex;
+    align-items: center;
+    
+    text-decoration: none;
+}
+
+.logo-img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    display: block; 
+    flex-shrink: 0;
+}
+
+.brand-name {
+    display: flex;
+    align-items: center;
+    font-family: 'Playfair Display', serif;
+    font-size:20px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.brand-primary {
+    color: var(--primary);
+}
+
+.brand-secondary {
+    color: var(--secondary);
+}
+
+@media (max-width: 1024px) {
+
+    .logo-img {
+        width: 44px;
+        height: 44px;
+    }
+
+    .brand-name {
+        font-size: 1.2rem;
+    }
+
+    
+}
+
+
+/* =========================
+   Tablet (768px)
+========================= */
+
+@media (max-width: 768px) {
+
+    .logo-img {
+        width: 38px;
+        height: 38px;
+    }
+
+    .brand-name {
+        font-size: 1.05rem;
+    }
+
+    
+}
+
+
+/* =========================
+   Mobile (480px)
+========================= */
+
+@media (max-width: 480px) {
+
+    .logo-img {
+        width: 34px;
+        height: 34px;
+    }
+
+    .brand-name {
+        font-size: 0.95rem;
+        letter-spacing: 0.2px;
+    }
+
+    
+}
+
+
+/* =========================
+   Small Mobile (360px)
+========================= */
+
+@media (max-width: 360px) {
+
+    .logo-img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .brand-name {
+        font-size: 0.85rem;
+    }
+
+    .brand-link {
+        gap: 5px;
+    }
+}
 .brand-name { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--text); font-weight: 700; letter-spacing: 0.5px; }
 .sidebar-close { display: none; color: var(--text2); font-size: 1.3rem; padding: 4px 8px; border-radius: 8px; transition: color var(--transition); }
 .sidebar-close:hover { color: var(--primary); background: var(--primary-glow); }

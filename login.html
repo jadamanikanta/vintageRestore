@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/png" sizes="184x184" href="../global-images/logo-1.png">
+<link rel="icon" type="image/png" sizes="184x184" href="../global-images/ai-concept.png">
 <title>Vintage Car Login</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
@@ -41,6 +41,126 @@ body{
 
 .dark{
     background:#111827;
+}
+/* =========================
+   Desktop (Default)
+========================= */
+
+.brand-logo{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.brand-logo img{
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    display: block;
+    flex-shrink: 0;
+}
+
+.brand-text{
+    display: flex;
+    align-items: center;
+    font-family: "Playfair Display", serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.brand-primary{
+    color: var(--primary);
+}
+
+.brand-secondary{
+    color: var(--secondary);
+}
+
+
+/* =========================
+   Laptop (≤1024px)
+========================= */
+@media (max-width:1024px){
+
+    .brand-logo{
+        gap:10px;
+    }
+
+    .brand-logo img{
+        width:48px;
+        height:48px;
+    }
+
+    .brand-text{
+        font-size:1.7rem;
+    }
+
+}
+
+
+/* =========================
+   Tablet (≤768px)
+========================= */
+@media (max-width:768px){
+
+    .brand-logo{
+        gap:8px;
+    }
+
+    .brand-logo img{
+        width:42px;
+        height:42px;
+    }
+
+    .brand-text{
+        font-size:1.4rem;
+    }
+
+}
+
+
+/* =========================
+   Mobile (≤480px)
+========================= */
+@media (max-width:480px){
+
+    .brand-logo{
+        gap:6px;
+    }
+
+    .brand-logo img{
+        width:36px;
+        height:36px;
+    }
+
+    .brand-text{
+        font-size:1.1rem;
+    }
+
+}
+
+
+/* =========================
+   Small Mobile (≤360px)
+========================= */
+@media (max-width:360px){
+
+    .brand-logo{
+        gap:5px;
+    }
+
+    .brand-logo img{
+        width:32px;
+        height:32px;
+    }
+
+    .brand-text{
+        font-size:0.95rem;
+    }
+
 }
 
 
@@ -232,10 +352,13 @@ body.dark .social-btn{
 
     
     <div class="text-center mb-5">
-        <a href="../index.html"
-            class="text-2xl font-bold text-amber-600 hover:text-amber-500">
-            <span style="color:#6B1E1E">Vintage</span><span style="color:#C8A96A">Restore</span>
-        </a>
+        <a href="../index.html" class="brand-logo">
+    <img src="../global-images/ai-concept.png" alt="Vintage Restore Logo">
+
+    <span class="brand-text">
+        <span class="brand-primary">Vintage</span><span class="brand-secondary">Restore</span>
+    </span>
+</a>
         <p class="text-sm text-gray-500 mt-1">Classic Restoration Experts</p>
     </div>
 
