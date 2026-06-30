@@ -505,7 +505,7 @@ function initializeNavbar() {
     navMenu.classList.toggle("active");
   });
 
-  // MOBILE DROPDOWN SUPPORT
+  
   const dropdowns = document.querySelectorAll(".dropdown");
 
 dropdowns.forEach(drop => {
@@ -513,8 +513,8 @@ dropdowns.forEach(drop => {
   const menu = drop.querySelector(".dropdown-menu");
 
   toggleLink.addEventListener("click", (e) => {
-    if (window.innerWidth <= 768) {
-      e.preventDefault(); // 
+    if (window.innerWidth <= 1024) {
+      e.preventDefault(); 
       menu.classList.toggle("show");
     }
   });

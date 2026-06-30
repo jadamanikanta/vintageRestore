@@ -142,6 +142,11 @@ body[dir="rtl"] .hero {
     justify-content: center;
     flex-wrap: wrap;
   }
+  .hero-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 @media (max-width: 768px) {
@@ -151,6 +156,11 @@ body[dir="rtl"] .hero {
 
   .hero-image img {
     height: 300px;
+  }
+  .hero-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
