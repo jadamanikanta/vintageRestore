@@ -84,10 +84,6 @@ body {
     color: var(--secondary);
 }
 
-/* Dark Mode */
-body.dark .logo a {
-    color: #ffffff;
-}
 
 body.dark .logo span {
     color: var(--secondary);
