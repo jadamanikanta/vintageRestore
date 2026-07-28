@@ -294,9 +294,9 @@ function renderProjects() {
    GALLERY DATA
    ============================== */
 const galleryData = [
-  { car:'1967 Ford Mustang', beforeImg:'assets/mustang_before.png', afterImg:'assets/mustang_after.png', beforeLabel:'Rusty shell – stripped frame', afterLabel:'Show-ready glossy black' },
-  { car:'1955 Chevrolet Bel Air', beforeImg:'assets/belair_before.png', afterImg:'assets/belair_after.png', beforeLabel:'Faded two-tone paint, dents', afterLabel:'Turquoise & ivory perfection' },
-  { car:'1970 Dodge Charger', beforeImg:'assets/charger_before.png', afterImg:'assets/charger_after.png', beforeLabel:'Seized engine, rot', afterLabel:'440 big-block roaring again' }
+  { car:'1967 Ford Mustang', beforeImg:'mustang_before_dasboard.png', afterImg:'mustang_after_dashboard.png', beforeLabel:'Rusty shell – stripped frame', afterLabel:'Show-ready glossy black' },
+  { car:'1955 Chevrolet Bel Air', beforeImg:'belair_before.png', afterImg:'belair_after.png', beforeLabel:'Faded two-tone paint, dents', afterLabel:'Turquoise & ivory perfection' },
+  { car:'1970 Dodge Charger', beforeImg:'charger_before.png', afterImg:'charger_after.png', beforeLabel:'Seized engine, rot', afterLabel:'440 big-block roaring again' }
 ];
 
 function renderGallery() {
