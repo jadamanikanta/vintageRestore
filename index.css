@@ -30,7 +30,7 @@ body {
       rgba(0,0,0,0.85) 40%,
       rgba(0,0,0,0.1) 100%
     ),
-    url("../manikanta.jpeg");
+    url("manikanta.jpeg");
 
   background-position: center;
   background-size: cover;
@@ -47,7 +47,7 @@ html[dir="rtl"] .vintage-hero {
       rgba(0,0,0,0.75) 40%,
       rgba(0,0,0,0.10) 100%
     ),
-    url("../manikanta2.png");
+    url("manikanta2.png");
 
   background-position: center;
   background-size: cover;
@@ -64,7 +64,7 @@ body.dark .vintage-hero {
       rgba(0,0,0,0.85) 40%,
       rgba(0,0,0,0.20) 100%
     ),
-    url("../manikanta.jpeg");
+    url("manikanta.jpeg");
 
   background-position: center;
   background-size: cover;
