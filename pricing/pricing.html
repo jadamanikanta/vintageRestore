@@ -6,14 +6,58 @@
     <link rel="icon" type="image/png" sizes="184x184" href="../global-images/ai-concept.png">
     <title>Vintage Restore</title>
 
-    <link rel="stylesheet" href="../global-css/global.css">
+    <link rel="stylesheet" href="../global.css">
     
     <link rel="stylesheet" href="../pricing/pricing.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     
 </head>
 <body>
 
-    <div id="navbar"></div>
+     <header class="header">
+  <div class="navbar-container nav">
+
+    
+    <div class="logo">
+    <a href="../index.html">
+        <img src="../global-images/ai-concept.png" alt="Vintage Restore Logo">
+        Vintage<span>Restore</span>
+    </a>
+</div>
+
+    
+    <nav class="nav-links" id="navMenu">
+  <div class="dropdown">
+    <a href="../index.html" class="nav-item nav-link" data-page="home">Home<i data-lucide="chevron-down"></i></a>
+    <div class="dropdown-menu">
+      <a href="../index.html" class="nav-link" data-page="home">Home 1</a>
+      <a href="../home-2/home-2.html" class="nav-link" data-page="home">Home 2</a>
+    </div>
+  </div>
+  <a href="../about/about.html" class="nav-link">About</a>
+  <a href="../services/services.html" class="nav-link">Services</a>
+  <a href="../pricing/pricing.html" class="nav-link">Pricing</a>
+  <a href="../blog/blog.html" class="nav-link">Blog</a>
+  <a href="../contact/contact.html" class="nav-link">Contact</a>
+  <a href="../dashboard.html" class="nav-link">Dashboard</a>
+
+  <button class="btn-primary mobile-login" id="mobileLoginBtn">Login</button>
+</nav>
+
+    
+    <div class="nav-actions">
+      <button id="rtlToggle" class="btn-secondary">RTL</button>
+      <button id="themeToggle" class="icon-btn">
+  <i data-lucide="moon" class="icon"></i>
+</button>
+      <button class="btn-primary desktop-login" id="loginBtn">
+  Login
+</button>
+      <button id="menuToggle" class="hamburger">☰</button>
+    </div>
+
+  </div>
+</header>
 
     <section class="pricing-hero">
     <div class="hero-box">
@@ -231,50 +275,196 @@
 
 </section>
 
-    <div id="footer"></div>
+    <footer class="footer">
+
+  <div class="footer-container footer-grid">
+
+    
+    <div class="footer-col">
+  <h3 class="footer-title" id="homepage-redirect">
+    <img src="../global-images/ai-concept.png" alt="Vintage Restore Logo" class="footer-logo">
+
+    <span class="footer-brand">
+        <span class="brand-primary">Vintage</span><span class="brand-secondary">Restore</span>
+    </span>
+</h3>
+  <p>
+    We specialize in restoring classic cars with precision craftsmanship,
+    preserving history while delivering modern performance.
+  </p>
+
+  
+  <div class="footer-social">
+    <a href="#" class="social-icon" aria-label="Facebook">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="#" class="social-icon" aria-label="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="#" class="social-icon" aria-label="Twitter">
+      <i class="fab fa-twitter"></i>
+    </a>
+    <a href="#" class="social-icon" aria-label="LinkedIn">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+  </div>
+</div>
+
+    
+    <div class="footer-col">
+      <h4 class="footer-subtitle">Quick Links</h4>
+      <a href="../home-2/home-2.html">Home</a>
+      <a href="../services/services.html">Services</a>
+      <a href="../pricing/pricing.html">Pricing</a>
+      <a href="../about/about.html">About</a>
+      <a href="../contact/contact.html">Contact</a>
+    </div>
+
+    
+    <div class="footer-col">
+      <h4 class="footer-subtitle">Services</h4>
+      <a href="../services/servicedetails.html">Engine Restoration</a>
+      <a href="../services/servicedetails.html">Body Work</a>
+      <a href="../services/servicedetails.html">Paint & Finish</a>
+      <a href="../services/servicedetails.html">Interior Repair</a>
+    </div>
+
+    
+    <div class="footer-col">
+      <h4 class="footer-subtitle">Clients</h4>
+      <a href="../dashboard.html">Dashboard</a>
+      <a href="../404page.html">404 page</a>
+      <a href="../coming-soon.html">coming soon</a>
+    </div>
+
+    
+    <div class="footer-col">
+      <h4 class="footer-subtitle">Contact</h4>
+      <p>Email: info@vintagerestore.com</p>
+      <p>Phone: +91 900000000</p>
+      <p>Location: Bangalore, India</p>
+    </div>
+
+  </div>
+
+  
+  <div class="footer-bottom">
+    <div class="footer-container footer-bottom-content">
+      <p>© 2026 VintageRestore. All rights reserved.</p>
+
+      <div class="footer-links">
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Cookies</a>
+      </div>
+    </div>
+  </div>
+
+</footer>
 
     
 
     <script>
         
-fetch("../components/navbar.html")
-  .then(res => res.text())
-  .then(data => {
-    document.getElementById("navbar").innerHTML = data;
+  document.addEventListener("DOMContentLoaded", () => {
 
-    
-  const loginBtn = document.getElementById("loginBtn");
-  loginBtn.addEventListener("click", () => {
-    window.location.href = "../login.html"; 
-  });
-  const mobileLoginBtn = document.getElementById("mobileLoginBtn");
-  mobileLoginBtn.addEventListener("click", () => {
-    window.location.href = "../login.html"; 
-  });
+  lucide.createIcons();
 
-const links = document.querySelectorAll('.nav-link');
-    const currentPage = window.location.pathname.split('/').pop();
+  // Theme Toggle
+  const themeToggle = document.getElementById("themeToggle");
 
-    links.forEach(link => {
-      const linkPage = link.getAttribute('href').split('/').pop();
-      if (linkPage === currentPage) {
-        link.classList.add('active');
+  if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+
+      themeToggle.innerHTML = document.body.classList.contains("dark")
+        ? '<i data-lucide="sun"></i>'
+        : '<i data-lucide="moon"></i>';
+
+      lucide.createIcons();
+    });
+  }
+
+  // RTL
+  const rtlToggle = document.getElementById("rtlToggle");
+
+  if (rtlToggle) {
+    rtlToggle.addEventListener("click", () => {
+      const isRTL = document.documentElement.dir === "rtl";
+      document.documentElement.dir = isRTL ? "ltr" : "rtl";
+    });
+  }
+
+  // Mobile Menu
+  const menuToggle = document.getElementById("menuToggle");
+  const navMenu = document.getElementById("navMenu");
+
+  if (menuToggle && navMenu) {
+    menuToggle.addEventListener("click", () => {
+      navMenu.classList.toggle("active");
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+        navMenu.classList.remove("active");
+        document.querySelectorAll(".dropdown-menu").forEach(dm => {
+          dm.classList.remove("show");
+        });
       }
     });
-    initializeNavbar();
+  }
+
+  // Dropdown
+  const dropdowns = document.querySelectorAll(".dropdown");
+
+  dropdowns.forEach(drop => {
+    const toggleLink = drop.querySelector(".nav-item");
+    const menu = drop.querySelector(".dropdown-menu");
+
+    if (toggleLink && menu) {
+      toggleLink.addEventListener("click", (e) => {
+        if (window.innerWidth <= 1024) {
+          e.preventDefault();
+          menu.classList.toggle("show");
+        }
+      });
+    }
   });
 
-  fetch("../components/footer.html")
-  .then(res => res.text())
-  .then(data => {
-    document.getElementById("footer").innerHTML = data;
-    
-    const mobileLoginBtn = document.getElementById("homepage-redirect");
-  mobileLoginBtn.addEventListener("click", () => {
+  // Login Buttons
+  const loginBtn = document.getElementById("loginBtn");
+
+  if (loginBtn) {
+    loginBtn.addEventListener("click", () => {
+      window.location.href = "../login.html";
+    });
+  }
+
+  const mobileLoginBtn = document.getElementById("mobileLoginBtn");
+
+  if (mobileLoginBtn) {
+    mobileLoginBtn.addEventListener("click", () => {
+      window.location.href = "../login.html";
+    });
+  }
+
+  // Active Link
+  const links = document.querySelectorAll(".nav-link");
+  const currentPage = window.location.pathname.split("/").pop();
+
+  links.forEach(link => {
+    const linkPage = link.getAttribute("href").split("/").pop();
+
+    if (linkPage === currentPage) {
+      link.classList.add("active");
+    }
+  });
+
+  const mobileLoginBtn2 = document.getElementById("homepage-redirect");
+  mobileLoginBtn2.addEventListener("click", () => {
     window.location.href = "../index.html"; 
   });
-    
-  });
+
+});
 
   const reveals = document.querySelectorAll('.reveal');
 
@@ -292,52 +482,7 @@ function revealOnScroll(){
 window.addEventListener('scroll', revealOnScroll);
 revealOnScroll();
 
-
-// NAVBAR LOGIC
-function initializeNavbar() {
-
-  const themeToggle = document.getElementById("themeToggle");
-  lucide.createIcons();
-  themeToggle.addEventListener("click", () => {
-    document.body.classList.toggle("dark");
-    themeToggle.innerHTML = document.body.classList.contains("dark")
-      ? '<i data-lucide="sun"></i>'
-      : '<i data-lucide="moon"></i>';
-    lucide.createIcons();
-  });
-
-// RTL
-const rtlToggle = document.getElementById("rtlToggle");
-
-rtlToggle.addEventListener("click", () => {
-  const isRTL = document.documentElement.dir === "rtl";
-  document.documentElement.dir = isRTL ? "ltr" : "rtl";
-});
-
-// MOBILE MENU
-const menuToggle = document.getElementById("menuToggle");
-const navMenu = document.getElementById("navMenu");
-
-menuToggle.addEventListener("click", () => {
-  navMenu.classList.toggle("active");
-});
-
-// MOBILE DROPDOWN SUPPORT
-const dropdowns = document.querySelectorAll(".dropdown");
-
-dropdowns.forEach(drop => {
-  const toggleLink = drop.querySelector(".nav-item"); // Home
-  const menu = drop.querySelector(".dropdown-menu");
-
-  toggleLink.addEventListener("click", (e) => {
-    if (window.innerWidth <= 1024) {
-      e.preventDefault(); // ✅ block ONLY Home
-      menu.classList.toggle("show");
-    }
-  });
-});
-}
-    </script>
+ </script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
       lucide.createIcons();
