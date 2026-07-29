@@ -6,7 +6,7 @@
     padding:60px 5%;
     background:
     linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)),
-    url('../gimg-5.jpg') center/cover;
+    url('gimg-5.jpg') center/cover;
 }
 
 .hero-box{

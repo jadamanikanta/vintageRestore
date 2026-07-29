@@ -18,7 +18,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: url("../gimg-4.jpg") center/cover;
+  background: url("gimg-4.jpg") center/cover;
   opacity: 0.21;
   z-index: 0;
 }
